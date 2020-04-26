@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "836927649903",
+    "firebase_url": "https://liveregistration.firebaseio.com",
+    "project_id": "liveregistration",
+    "storage_bucket": "liveregistration.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836927649903:android:88e479fd6b0fef5486759a",
+        "android_client_info": {
+          "package_name": "com.denzo.in_live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836927649903-s4ubskc221aidd8fsto7ai0faqoqrb2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ603PwcOWws0p75PWk3o9tUjw3hjbR-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836927649903-s4ubskc221aidd8fsto7ai0faqoqrb2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
