@@ -9,8 +9,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.denzo.in_live.MainActivity;
 import com.denzo.in_live.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -28,114 +31,89 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class Login_form extends AppCompatActivity {
 
-    private SignInButton signInButton;
-    private GoogleSignInClient mGoogleSignInClient;
-    private  String TAG = "MainActivity";
-    private FirebaseAuth mAuth;
-    private Button btnSignOut;
-    private int RC_SIGN_IN = 1;
+    EditText emailId, password;
+    Button btnSignIn;
+    TextView tvSignUp;
+    FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_form);
         getSupportActionBar().setTitle("LogIn !");
 
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        emailId = findViewById(R.id.user);
+        password = findViewById(R.id.pw);
+        btnSignIn = findViewById(R.id.button);
+        tvSignUp = findViewById(R.id.textView);
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-        signInButton.setOnClickListener(new View.OnClickListener() {
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
-            public void onClick(View view) {
-                signIn();
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
+                if( mFirebaseUser != null ){
+                    Toast.makeText(Login_form.this,"You are logged in",Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(Login_form.this, MainActivity.class);
+                    startActivity(i);
+                }
+                else{
+                    Toast.makeText(Login_form.this,"Please Login",Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
+
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = emailId.getText().toString();
+                String pwd = password.getText().toString();
+                if(email.isEmpty()){
+                    emailId.setError("Please enter email id");
+                    emailId.requestFocus();
+                }
+                else  if(pwd.isEmpty()){
+                    password.setError("Please enter your password");
+                    password.requestFocus();
+                }
+                else  if(email.isEmpty() && pwd.isEmpty()){
+                    Toast.makeText(Login_form.this,"Fields Are Empty!",Toast.LENGTH_SHORT).show();
+                }
+                else  if(!(email.isEmpty() && pwd.isEmpty())){
+                    mFirebaseAuth.signInWithEmailAndPassword(email, pwd).addOnCompleteListener(Login_form.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(!task.isSuccessful()){
+                                Toast.makeText(Login_form.this,"Login Error, Please Login Again",Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Intent intToHome = new Intent(Login_form.this, MainActivity.class);
+                                startActivity(intToHome);
+                            }
+                        }
+                    });
+                }
+                else{
+                    Toast.makeText(Login_form.this,"Error Occurred!",Toast.LENGTH_SHORT).show();
+
+                }
+
             }
         });
 
-        btnSignOut.setOnClickListener(new View.OnClickListener() {
+        tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                mGoogleSignInClient.signOut();
-                Toast.makeText(Login_form.this,"You are Logged Out",Toast.LENGTH_SHORT).show();
-                btnSignOut.setVisibility(View.INVISIBLE);
+            public void onClick(View v) {
+                Intent intSignUp = new Intent(Login_form.this, MainActivity.class);
+                startActivity(intSignUp);
             }
         });
-
-    }
-
-    public void btn_login(View view) {
-
-        startActivity(new Intent(getApplicationContext(),Signup_Form.class));
-    }
-
-
-    private void signIn(){
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == RC_SIGN_IN){
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
-        }
+    protected void onStart() {
+        super.onStart();
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
-
-    private void handleSignInResult(Task<GoogleSignInAccount> completedTask){
-        try{
-
-            GoogleSignInAccount acc = completedTask.getResult(ApiException.class);
-            Toast.makeText(Login_form.this,"Signed In Successfully",Toast.LENGTH_SHORT).show();
-            FirebaseGoogleAuth(acc);
-        }
-        catch (ApiException e){
-            Toast.makeText(Login_form.this,"Sign In Failed",Toast.LENGTH_SHORT).show();
-            FirebaseGoogleAuth(null);
-        }
-    }
-
-    private void FirebaseGoogleAuth(GoogleSignInAccount acct) {
-        //check if the account is null
-        if (acct != null) {
-            AuthCredential authCredential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-            mAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(Login_form.this, "Successful", Toast.LENGTH_SHORT).show();
-                        FirebaseUser user = mAuth.getCurrentUser();
-                        updateUI(user);
-                    } else {
-                        Toast.makeText(Login_form.this, "Failed", Toast.LENGTH_SHORT).show();
-                        updateUI(null);
-                    }
-                }
-            });
-        }
-        else{
-            Toast.makeText(Login_form.this, "acc failed", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void updateUI(FirebaseUser fUser){
-        btnSignOut.setVisibility(View.VISIBLE);
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
-        if(account !=  null){
-            String personName = account.getDisplayName();
-            String personGivenName = account.getGivenName();
-            String personFamilyName = account.getFamilyName();
-            String personEmail = account.getEmail();
-            String personId = account.getId();
-            Uri personPhoto = account.getPhotoUrl();
-
-            Toast.makeText(Login_form.this,personName + personEmail ,Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
 }
