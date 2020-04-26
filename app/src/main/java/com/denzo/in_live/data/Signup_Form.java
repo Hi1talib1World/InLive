@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.denzo.in_live.R;
+
 public class Signup_Form extends AppCompatActivity {
 
     @Override
