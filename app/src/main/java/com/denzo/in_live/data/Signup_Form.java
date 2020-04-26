@@ -65,10 +65,10 @@ public class Signup_Form extends AppCompatActivity {
                     password.setError("Please enter your password");
                     password.requestFocus();
                 }
-                else  if(email.isEmpty() && pwd.isEmpty()){
+                else  if(email.isEmpty() && pwd.isEmpty() && pwdc.isEmpty() && full.isEmpty() && usr.isEmpty() ) {
                     Toast.makeText(Signup_Form.this,"Fields Are Empty!",Toast.LENGTH_SHORT).show();
                 }
-                else  if(!(email.isEmpty() && pwd.isEmpty())){
+                else  if(!(email.isEmpty() && pwd.isEmpty() && pwdc.isEmpty() && full.isEmpty() && usr.isEmpty())){
                     mFirebaseAuth.createUserWithEmailAndPassword(email, pwd).addOnCompleteListener(Signup_Form.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
