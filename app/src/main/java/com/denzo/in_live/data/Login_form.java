@@ -102,18 +102,17 @@ public class Login_form extends AppCompatActivity {
             }
         });
 
-        tvSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intSignUp = new Intent(Login_form.this, MainActivity.class);
-                startActivity(intSignUp);
-            }
-        });
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+    }
+
+    public void btn_login(View view) {
+        Intent intTosu = new Intent(Login_form.this, Signup_Form.class);
+        startActivity(intTosu);
     }
 }
