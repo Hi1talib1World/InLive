@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Signup_Form extends AppCompatActivity {
 
-    EditText emailId, password;
+    EditText emailId, password ,fullId,userId ,cpassword;
     Button btnSignUp;
     TextView tvSignIn;
     FirebaseAuth mFirebaseAuth;
@@ -31,8 +31,11 @@ public class Signup_Form extends AppCompatActivity {
         getSupportActionBar().setTitle("Sign Up !");
 
         mFirebaseAuth = FirebaseAuth.getInstance();
-        emailId = findViewById(R.id.editText);
-        password = findViewById(R.id.editText2);
+        fullId = findViewById(R.id.full);
+        userId = findViewById(R.id.user2);
+        emailId = findViewById(R.id.email);
+        password = findViewById(R.id.pw);
+        cpassword = findViewById(R.id.pwc);
         btnSignUp = findViewById(R.id.button2);
         tvSignIn = findViewById(R.id.textView);
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -40,9 +43,23 @@ public class Signup_Form extends AppCompatActivity {
             public void onClick(View v) {
                 String email = emailId.getText().toString();
                 String pwd = password.getText().toString();
+                String pwdc = cpassword.getText().toString();
+                String full = fullId.getText().toString();
+                String usr = userId.getText().toString();
+
                 if(email.isEmpty()){
                     emailId.setError("Please enter email id");
                     emailId.requestFocus();
+                }else  if(usr.isEmpty()){
+                    userId.setError("Please enter your password");
+                    userId.requestFocus();
+                }else  if(full.isEmpty()){
+                    fullId.setError("Please enter your password");
+                    fullId.requestFocus();
+                }
+                else  if(pwdc.isEmpty()){
+                    cpassword.setError("Please confirme your password");
+                    cpassword.requestFocus();
                 }
                 else  if(pwd.isEmpty()){
                     password.setError("Please enter your password");
