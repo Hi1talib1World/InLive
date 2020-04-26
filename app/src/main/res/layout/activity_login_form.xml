@@ -22,11 +22,13 @@
         android:textColorHint="@color/colorPrimary"
 
         >
+
         <EditText
+            android:id="@+id/user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/user_name"
             android:ems="10"
+            android:hint="@string/user_name"
             android:inputType="text"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
@@ -41,25 +43,27 @@
         android:textColorHint="@color/colorPrimary"
 
         >
+
         <EditText
+            android:id="@+id/pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
             android:ems="10"
+            android:hint="@string/password"
             android:inputType="text"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="122dp" />
 
         <Button
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Login"
-            android:textSize="21sp"
             android:layout_marginTop="40dp"
-            android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/button_rounded"
-            />
+            android:text="Login"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="21sp" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
