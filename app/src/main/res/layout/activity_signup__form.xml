@@ -17,11 +17,13 @@
         android:textColorHint="@color/colorPrimary"
 
         >
+
         <EditText
+            android:id="@+id/full"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="@string/enter_full_name"
-            android:ems="10"
             android:inputType="text"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
@@ -36,11 +38,13 @@
         android:textColorHint="@color/colorPrimary"
 
         >
+
         <EditText
+            android:id="@+id/user2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/user_name"
             android:ems="10"
+            android:hint="@string/user_name"
             android:inputType="text"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
@@ -57,6 +61,7 @@
         >
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -76,6 +81,7 @@
         >
 
         <EditText
+            android:id="@+id/pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -96,6 +102,7 @@
         >
 
         <EditText
+            android:id="@+id/pwc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -150,14 +157,14 @@
 </RadioGroup>
 
     <Button
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Register"
-        android:textSize="21sp"
         android:layout_marginTop="40dp"
-        android:textColor="@color/colorPrimaryDark"
         android:background="@drawable/button_rounded"
-        />
+        android:text="Register"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="21sp" />
 
     <TextView
         android:id="@+id/textView"
