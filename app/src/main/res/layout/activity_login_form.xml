@@ -68,6 +68,7 @@
             android:layout_marginTop="40dp"
             android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/button_rounded"
+            android:onClick="btn_login"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
