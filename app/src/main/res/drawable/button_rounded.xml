@@ -4,7 +4,5 @@
     <solid
         android:color="@color/colorAccent"
     />
-    <corners
-        android:redius="85dp"
-        />
+
 </shape>
