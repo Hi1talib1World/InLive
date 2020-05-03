@@ -38,6 +38,8 @@ public class Signup_Form extends AppCompatActivity {
     FirebaseAuth mFirebaseAuth;
     CallbackManager callbackManager;
     SignInButton signInButton;
+    private static final int RC_SIGN_IN = 1;
+
     private GoogleApiClient googleApiClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,21 +134,18 @@ public class Signup_Form extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==RC_SIGN_IN){
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleSignInResult(result);
         }
     }
+
+
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+
+
     private void handleSignInResult(GoogleSignInResult result){
         if(result.isSuccess()){
             gotoProfile();
