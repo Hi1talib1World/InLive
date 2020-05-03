@@ -16,4 +16,6 @@
     <string name="enter_full_name">Enter Full name</string>
     <string name="user_name">user name</string>
     <string name="password">PassWord</string>
+    <string name="facebook_app_id">718191772282882</string>
+    <string name="fb_login_protocol_scheme">fb718191772282882</string>
 </resources>
