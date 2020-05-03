@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.denzo.in_live">
-    <string name="facebook_app_id">718191772282882</string>
-    <string name="fb_login_protocol_scheme">fb718191772282882</string>
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,10 +15,16 @@
         <activity android:name=".data.Login_form">
 
         </activity>
-        <activity android:name=".data.Signup_Form" >
+        <activity android:name=".data.Signup_Form"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
