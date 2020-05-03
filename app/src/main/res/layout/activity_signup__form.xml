@@ -165,6 +165,17 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_in_button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+    </com.google.android.gms.common.SignInButton>
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
