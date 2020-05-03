@@ -31,6 +31,8 @@ public class Signup_Form extends AppCompatActivity {
         setContentView(R.layout.activity_signup__form);
         getSupportActionBar().setTitle("Sign Up !");
 
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
         fullId = findViewById(R.id.full);
         userId = findViewById(R.id.user2);
