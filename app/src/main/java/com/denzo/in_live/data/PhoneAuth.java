@@ -81,6 +81,13 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
                         mCallbacks);        // OnVerificationStateChangedCallbacks
                 break;
             case R.id.bt_resend_otp:
+                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                        etPhone.getText().toString(),        // Phone number to verify
+                        1  ,               // Timeout duration
+                        TimeUnit.MINUTES,   // Unit of timeout
+                        this,               // Activity (for callback binding)
+                        mCallbacks,         // OnVerificationStateChangedCallbacks
+                        mResendToken);             // Force Resending Token from callbacks
                 break;
             case R.id.bt_verify_otp:
                 PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, etOtp.getText().toString());
@@ -107,5 +114,7 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
                            PhoneAuthProvider.ForceResendingToken token) {
         Toast.makeText(PhoneAuth.this, "Code Sent succesfully", Toast.LENGTH_SHORT).show();
         mVerificationId = verificationId; //Add this line to save //verification Id
+        mResendToken = token; //Add this line to save the resend token
+
     }
 }
