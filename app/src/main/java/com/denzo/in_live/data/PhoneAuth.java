@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
+import java.util.concurrent.TimeUnit;
+
 public class PhoneAuth extends AppCompatActivity implements View.OnClickListener {
 
     EditText etPhone, etOtp;
@@ -65,6 +67,12 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bt_send_otp:
+                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                        etPhone.getText().toString(),        // Phone number to verify
+                        1,                 // Timeout duration
+                        TimeUnit.MINUTES,   // Unit of timeout
+                        this,               // Activity (for callback binding)
+                        mCallbacks);        // OnVerificationStateChangedCallbacks
                 break;
             case R.id.bt_resend_otp:
                 break;
