@@ -142,7 +142,7 @@ public class Signup_Form extends AppCompatActivity {
 
 
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
+        Toast.makeText(Signup_Form.this,"Connection Failed!", Toast.LENGTH_SHORT).show();
     }
 
 
