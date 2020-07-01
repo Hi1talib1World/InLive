@@ -8,11 +8,13 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.denzo.in_live.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PhoneAuth extends AppCompatActivity implements View.OnClickListener {
 
     EditText etPhone, etOtp;
     Button btSendOtp, btResendOtp, btVerifyOtp;
+    private FirebaseAuth mAuth;
 
 
     protected void onCreate(Bundle savedInstanceState) {
