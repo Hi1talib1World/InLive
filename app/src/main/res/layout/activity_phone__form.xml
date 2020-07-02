@@ -22,15 +22,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_rounded"
-        android:text="Send Otp" />
+        android:text="Send Code" />
 
     <Button
         android:id="@+id/bt_resend_otp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_rounded"
-        android:text="Resend OTP" />
+        android:background="@drawable/btn_white"
+        android:text="Resend Code"
+        android:textColor="#FFF"
+        />
 
     <EditText
         android:id="@+id/et_otp"
@@ -39,7 +41,7 @@
         android:layout_marginTop="15dp"
         android:ems="6"
         android:inputType="number"
-        android:hint="Enter verification OTP" />
+        android:hint="Enter verification Code" />
 
     <Button
         android:id="@+id/bt_verify_otp"
@@ -47,5 +49,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_rounded"
-        android:text="Verify OTP" />
+        android:text="Verify Code" />
 </LinearLayout>
