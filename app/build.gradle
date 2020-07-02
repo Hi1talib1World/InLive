@@ -55,7 +55,7 @@ dependencies {
         exclude group: 'glide-parent'
     }
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
-
+    implementation 'com.github.yalantis:ucrop:2.2.5'
 
 }
 apply plugin: 'com.google.gms.google-services'  // Google Services plugin
