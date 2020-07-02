@@ -1,5 +1,6 @@
 package com.denzo.in_live.data;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,7 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
     Button btSendOtp, btResendOtp, btVerifyOtp;
     private FirebaseAuth mAuth;
     String mVerificationId;
+    Button btnRun;
     PhoneAuthProvider.ForceResendingToken mResendToken;
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
@@ -38,7 +40,16 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
         initFields();
         mAuth = FirebaseAuth.getInstance();
 
+        btnRun = findViewById(R.id.bt_verify_otp);
+        btnRun.setOnClickListenersetOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        };
 
     }
     void initFireBaseCallbacks() {
