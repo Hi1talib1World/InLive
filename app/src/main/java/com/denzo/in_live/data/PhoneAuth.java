@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PhoneAuth extends AppCompatActivity implements View.OnClickListener {
 
-    EditText etPhone, etOtp;
+    EditText etPhone, etOtp,codeVerfy;
     Button btSendOtp, btResendOtp, btVerifyOtp;
     private FirebaseAuth mAuth;
     String mVerificationId;
@@ -41,14 +41,16 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
         initFields();
         mAuth = FirebaseAuth.getInstance();
 
+        codeVerfy = findViewById(R.id.et_otp);
         btnRun = findViewById(R.id.bt_verify_otp);
         btnRun.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
-                if (){
+                String cV = codeVerfy.getText().toString();
+                if (!(cV.isEmpty())){
                     Toast.makeText(PhoneAuth.this,"successful Registration",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(PhoneAuth.this, Login_form.class));
 
                 }else {
                     Toast.makeText(PhoneAuth.this,"Unsuccessful, Please Try Again",Toast.LENGTH_SHORT).show();
