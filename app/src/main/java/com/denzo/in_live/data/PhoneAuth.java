@@ -33,6 +33,7 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
     PhoneAuthProvider.ForceResendingToken mResendToken;
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone__form);
@@ -49,7 +50,7 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
 
 
             }
-        };
+        }
 
     }
     void initFireBaseCallbacks() {
