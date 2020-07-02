@@ -42,15 +42,22 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
         mAuth = FirebaseAuth.getInstance();
 
         btnRun = findViewById(R.id.bt_verify_otp);
-        btnRun.setOnClickListenersetOnClickListener(new View.OnClickListener() {
+        btnRun.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
+                if (){
+                    Toast.makeText(PhoneAuth.this,"successful Registration",Toast.LENGTH_SHORT).show();
+
+                }else {
+                    Toast.makeText(PhoneAuth.this,"Unsuccessful, Please Try Again",Toast.LENGTH_SHORT).show();
+
+                }
 
 
             }
-        }
+        });
 
     }
     void initFireBaseCallbacks() {
