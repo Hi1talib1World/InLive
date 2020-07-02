@@ -16,6 +16,7 @@ import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
@@ -27,6 +28,7 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
     Button btSendOtp, btResendOtp, btVerifyOtp;
     private FirebaseAuth mAuth;
     String mVerificationId;
+    PhoneAuthProvider.ForceResendingToken mResendToken;
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +99,8 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(PhoneAuth.this, "Verification Success", Toast.LENGTH_SHORT).show();
+                                    FirebaseUser user = task.getResult().getUser();
+
                                 } else {
                                     if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                         Toast.makeText(PhoneAuth.this, "Verification Failed, Invalid credentials", Toast.LENGTH_SHORT).show();
@@ -109,7 +113,7 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
         }
     }
 
-    @Override
+    
     public void onCodeSent(String verificationId,
                            PhoneAuthProvider.ForceResendingToken token) {
         Toast.makeText(PhoneAuth.this, "Code Sent succesfully", Toast.LENGTH_SHORT).show();
