@@ -109,7 +109,7 @@ public class PictureActivity extends AppCompatActivity {
     }
 
     private void launchCameraIntent() {
-        Intent intent = new Intent(MainActivity.this, ImagePickerActivity.class);
+        Intent intent = new Intent(PictureActivity.this, ImagePickerActivity.class);
         intent.putExtra(ImagePickerActivity.INTENT_IMAGE_PICKER_OPTION, ImagePickerActivity.REQUEST_IMAGE_CAPTURE);
 
         // setting aspect ratio
