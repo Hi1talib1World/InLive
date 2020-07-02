@@ -113,7 +113,7 @@ public class PhoneAuth extends AppCompatActivity implements View.OnClickListener
         }
     }
 
-    
+
     public void onCodeSent(String verificationId,
                            PhoneAuthProvider.ForceResendingToken token) {
         Toast.makeText(PhoneAuth.this, "Code Sent succesfully", Toast.LENGTH_SHORT).show();
