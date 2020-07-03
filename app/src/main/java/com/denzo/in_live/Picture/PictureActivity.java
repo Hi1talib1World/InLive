@@ -17,6 +17,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.denzo.in_live.R;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -60,13 +61,13 @@ public class PictureActivity extends AppCompatActivity {
     private void loadProfile(String url) {
         Log.d(TAG, "Image cache path: " + url);
 
-        GlideApp.with(this).load(url)
+        Glide.with(this).load(url)
                 .into(imgProfile);
         imgProfile.setColorFilter(ContextCompat.getColor(this, android.R.color.transparent));
     }
 
     private void loadProfileDefault() {
-        GlideApp.with(this).load(R.drawable.ic_dashboard_black_24dp)
+        Glide.with(this).load(R.drawable.ic_dashboard_black_24dp)
                 .into(imgProfile);
         imgProfile.setColorFilter(ContextCompat.getColor(this, R.color.profile_default_tint));
     }
@@ -138,6 +139,7 @@ public class PictureActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE) {
             if (resultCode == Activity.RESULT_OK) {
                 Uri uri = data.getParcelableExtra("path");
