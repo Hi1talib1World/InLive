@@ -66,7 +66,7 @@ public class PictureActivity extends AppCompatActivity {
     }
 
     private void loadProfileDefault() {
-        GlideApp.with(this).load(R.drawable.baseline_account_circle_black_48)
+        GlideApp.with(this).load(R.drawable.ic_dashboard_black_24dp)
                 .into(imgProfile);
         imgProfile.setColorFilter(ContextCompat.getColor(this, R.color.profile_default_tint));
     }
