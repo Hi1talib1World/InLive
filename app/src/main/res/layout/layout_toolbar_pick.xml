@@ -17,7 +17,7 @@
             android:layout_marginTop="@dimen/activity_padding"
             android:layout_marginBottom="@dimen/activity_padding"
             android:scaleType="centerInside"
-            android:src="@drawable/baseline_account_circle_black_48"
+            android:src="@drawable/ic_launcher_foreground"
             app:civ_border_color="@android:color/white"
             app:civ_border_width="2dp" />
 
@@ -27,7 +27,7 @@
             android:layout_height="@dimen/ic_plus_width"
             android:layout_alignBottom="@id/img_profile"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_plus"
+            android:src="@drawable/ic_launcher_foreground"
             app:civ_shadow="true"
             app:civ_shadow_radius="1" />
     </RelativeLayout>
