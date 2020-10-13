@@ -3,6 +3,8 @@ package com.denzo.in_live.data;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 
 import android.content.Intent;
@@ -37,7 +39,8 @@ public class Login_form extends AppCompatActivity {
     EditText emailId, password;
     Button btnSignIn;
     TextView tvSignUp;
-    FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseAnalytics mFirebaseAnalytics;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     @Override
@@ -51,7 +54,7 @@ public class Login_form extends AppCompatActivity {
         password = findViewById(R.id.pw);
         btnSignIn = findViewById(R.id.button);
         tvSignUp = findViewById(R.id.textView);
-
+        mFirebaseAuth = FirebaseAuth.getInstance();
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -111,6 +114,8 @@ public class Login_form extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+
         mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 
