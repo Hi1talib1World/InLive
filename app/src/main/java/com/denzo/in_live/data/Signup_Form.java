@@ -36,7 +36,7 @@ public class Signup_Form extends AppCompatActivity {
     EditText emailId, password ,fullId,userId ,cpassword;
     Button btnSignUp;
     TextView tvSignIn;
-    FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth mFirebaseAuth;
     CallbackManager callbackManager;
     SignInButton signInButton;
     private static final int RC_SIGN_IN = 1;
