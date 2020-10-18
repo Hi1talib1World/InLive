@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "836927649903-e0vas0494ac4h00jlaaeq67gnu30v3u1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.denzo.in_live",
+            "certificate_hash": "472b5b81c07794a62b1db237991cdbff291f6cf2"
+          }
+        },
+        {
           "client_id": "836927649903-s4ubskc221aidd8fsto7ai0faqoqrb2c.apps.googleusercontent.com",
           "client_type": 3
         }
