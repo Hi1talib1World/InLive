@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzo.in_live.BuildConfig;
 import com.denzo.in_live.R;
-import com.denzo.in_live.ui.home.liveTv.Model.More.MoreModel;
+import com.denzo.in_live.Model.More.MoreModel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
