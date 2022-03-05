@@ -1,4 +1,8 @@
-package com.denzo.in_live.ui.home.liveTv.Model.More;
+package com.denzo.in_live.Model.More;
+
+import androidx.annotation.NonNull;
+
+import java.io.Serializable;
 
 public class MoreModel implements Serializable {
 
