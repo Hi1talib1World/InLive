@@ -1,4 +1,4 @@
-package com.denzo.in_live.ui.home.liveTv.Model.Series;
+package com.denzo.in_live.Model.Series;
 
 import com.google.gson.annotations.SerializedName;
 
