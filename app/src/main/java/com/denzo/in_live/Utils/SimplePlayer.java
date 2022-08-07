@@ -2,8 +2,6 @@ package com.denzo.in_live.Utils;
 
 import android.content.Context;
 
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
 
 public class SimplePlayer {
     private static SimplePlayer instance;
