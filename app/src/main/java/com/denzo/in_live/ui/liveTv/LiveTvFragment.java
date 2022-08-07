@@ -2,18 +2,23 @@ package com.denzo.in_live.ui.liveTv;
 
 import static java.security.AccessController.getContext;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzo.in_live.Activity.InitActivity;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Model.Movies.MoviesModel;
+import com.denzo.in_live.Utils.Constant;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
