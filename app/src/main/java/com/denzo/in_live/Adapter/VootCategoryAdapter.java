@@ -1,6 +1,21 @@
 package com.denzo.in_live.Adapter;
 
 
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import com.denzo.in_live.Model.Series.SeriesModel;
+import com.denzo.in_live.R;
+import com.google.android.material.card.MaterialCardView;
+
 public class VootCategoryAdapter extends RecyclerBuilder<ContentItem> {
     public VootCategoryAdapter(Context context, int layout) {
         super(context, layout);
@@ -45,7 +60,7 @@ public class VootCategoryAdapter extends RecyclerBuilder<ContentItem> {
                             bundle.putSerializable("MoviesPlaybackData",response.getObject());
                             start(MoviesDetailsActivity.class,bundle);
                         }
-                        else Toast.makeText(getContext(),"Something went wrong",Toast.LENGTH_SHORT).show();
+                        else Toast.makeText(getContext(),"Something went wrong", Toast.LENGTH_SHORT).show();
                     });
         }
         else if (model.getIsSeries().equals("1")){
