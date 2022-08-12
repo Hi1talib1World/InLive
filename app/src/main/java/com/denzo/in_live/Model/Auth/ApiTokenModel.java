@@ -4,6 +4,8 @@ import android.util.Base64;
 
 import androidx.annotation.NonNull;
 
+import com.denzo.in_live.task.DecoderTask;
+
 import java.io.Serializable;
 import java.security.MessageDigest;
 import java.util.Date;
@@ -13,7 +15,7 @@ public class ApiTokenModel extends HashMap<String,String> implements Serializabl
     private String timestamp=String.valueOf(new Date().getTime);
 
     public ApiTokenModel(){
-        DecoderTask decoderTask=DecoderTask.getInstance();
+        DecoderTask decoderTask= DecoderTask.getInstance();
         byte[] sec=Base64.decode(decoderTask.decrypt(sec()), Base64.DEFAULT);
         byte[] salt=Base64.decode(decoderTask.decrypt(salt()),Base64.DEFAULT);
         String version= DecoderTask
