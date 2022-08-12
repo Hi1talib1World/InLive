@@ -10,17 +10,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.androidlover5852.fetcher.Adapter.RecyclerBuilder;
-import com.androidlover5852.fetcher.Holder.BaseViewHolder;
-import com.androidlover5852.fetcher.Utils.Utils;
+
 import com.denzo.in_live.Model.Home.ContentItem;
 import com.denzo.in_live.Model.Home.DataItem;
 import com.denzo.in_live.R;
 
-import net.vidflix.Activity.MoviesActivity;
-import net.vidflix.Model.Home.ContentItem;
-import net.vidflix.Model.Home.DataItem;
-import net.vidflix.R;
+
 
 import java.util.ArrayList;
 import java.util.List;
