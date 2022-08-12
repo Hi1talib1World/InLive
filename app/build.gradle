@@ -46,6 +46,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:10.2.1'
     implementation 'com.onesignal:OneSignal:3.13.2'
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
 
     implementation 'com.google.firebase:firebase-analytics:21.1.0'
     implementation 'androidx.room:room-common:2.4.3'
