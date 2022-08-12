@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.denzo.in_live.Model.More.MoreModel;
+import com.denzo.in_live.R;
 
 
 public class MoreAdapter extends RecyclerBuilder<MoreModel> {
