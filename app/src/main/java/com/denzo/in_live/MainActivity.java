@@ -2,6 +2,7 @@ package com.denzo.in_live;
 
 import android.os.Bundle;
 
+import com.denzo.in_live.Model.Update.UpdateModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
