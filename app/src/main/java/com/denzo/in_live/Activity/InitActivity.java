@@ -6,6 +6,7 @@ import android.text.TextUtils;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.denzo.in_live.Adapter.ShimmerNormalAdapter;
 import com.denzo.in_live.Model.Auth.ApiTokenModel;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Utils.SimplePlayer;
