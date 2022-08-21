@@ -42,4 +42,9 @@
     <string name="dialog_permission_title">Grant Permissions</string>
     <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
     <string name="go_to_settings">GOTO SETTINGS</string>
+
+
+    <string name="about">A non-profitable idea to help people\n Maintained by Mr. Black Turban\n Designed and Developed by @</string>
+    <string name="version">BETA</string>
+    <string name="track_selection_title">Select Quality</string>
 </resources>
