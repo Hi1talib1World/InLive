@@ -14,7 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzo.in_live.Adapter.SearchAdapter;
 import com.denzo.in_live.R;
+import com.denzo.in_live.fragment.InitFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
