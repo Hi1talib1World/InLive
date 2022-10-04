@@ -18,6 +18,7 @@ import com.denzo.in_live.Adapter.SearchAdapter;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.fragment.InitFragment;
+import com.androidlover5852.fetcher.Utils.Utils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
