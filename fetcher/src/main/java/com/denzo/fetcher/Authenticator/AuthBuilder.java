@@ -1,18 +1,18 @@
-package com.androidlover5852.fetcher.Authenticator;
+package com.denzo.fetcher.Authenticator;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
 
-import com.androidlover5852.fetcher.Fetcher.Fetcher;
-import com.androidlover5852.fetcher.Fetcher.JsonConverter;
-import com.androidlover5852.fetcher.Listener.Listener;
-import com.androidlover5852.fetcher.Listener.OtpListener;
-import com.androidlover5852.fetcher.Model.LoginModel;
-import com.androidlover5852.fetcher.Model.RegistrationModel;
-import com.androidlover5852.fetcher.Model.Response;
-import com.androidlover5852.fetcher.Model.UserDataModel;
-import com.androidlover5852.fetcher.Fetcher.RequestConverter;
-import com.androidlover5852.fetcher.enums.Method;
+import com.denzo.fetcher.Fetcher.Fetcher;
+import com.denzo.fetcher.Fetcher.JsonConverter;
+import com.denzo.fetcher.Listener.Listener;
+import com.denzo.fetcher.Listener.OtpListener;
+import com.denzo.fetcher.Model.LoginModel;
+import com.denzo.fetcher.Model.RegistrationModel;
+import com.denzo.fetcher.Model.Response;
+import com.denzo.fetcher.Model.UserDataModel;
+import com.denzo.fetcher.Fetcher.RequestConverter;
+import com.denzo.fetcher.enums.Method;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
