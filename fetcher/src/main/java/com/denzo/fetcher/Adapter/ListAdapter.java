@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.Adapter;
+package com.denzo.fetcher.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 
-import com.androidlover5852.fetcher.Model.OptionsBuilder;
+import com.denzo.fetcher.Model.OptionsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
