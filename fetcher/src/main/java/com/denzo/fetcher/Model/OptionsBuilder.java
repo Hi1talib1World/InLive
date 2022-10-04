@@ -1,11 +1,11 @@
-package com.androidlover5852.fetcher.Model;
+package com.denzo.fetcher.Model;
 
 import android.app.Activity;
 import android.content.Context;
 
 import androidx.annotation.LayoutRes;
 
-import com.androidlover5852.fetcher.enums.Method;
+import com.denzo.fetcher.enums.Method;
 
 import java.util.ArrayList;
 
