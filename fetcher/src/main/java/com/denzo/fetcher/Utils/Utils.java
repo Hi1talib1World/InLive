@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.Utils;
+package com.denzo.fetcher.Utils;
 
 import android.content.Context;
 import android.content.res.Resources;
