@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.Fetcher;
+package com.denzo.fetcher.Fetcher;
 
 import com.androidlover5852.fetcher.Model.Response;
 import com.google.gson.Gson;
