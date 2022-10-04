@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.Authenticator;
+package com.denzo.fetcher.Authenticator;
 
 import android.app.Activity;
 import android.content.Context;
