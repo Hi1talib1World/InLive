@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.Model;
+package com.denzo.fetcher.Model;
 
 import com.androidlover5852.fetcher.Adapter.ListAdapter;
 import com.androidlover5852.fetcher.Adapter.RecyclerBuilder;
