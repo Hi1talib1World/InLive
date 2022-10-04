@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.enums;
+package com.denzo.fetcher.enums;
 
 public enum Method {
     GET,
