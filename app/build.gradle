@@ -30,7 +30,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':fetcher')
+    //implementation project(path: ':fetcher')
 
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
@@ -62,7 +62,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
-    implementation 'com.onesignal:OneSignal:3.13.2'
+    //implementation 'com.onesignal:OneSignal:3.13.2'
     implementation 'com.squareup.okhttp3:okhttp:4.6.0'
     //Butterknife
     implementation 'com.jakewharton:butterknife:10.2.3'
