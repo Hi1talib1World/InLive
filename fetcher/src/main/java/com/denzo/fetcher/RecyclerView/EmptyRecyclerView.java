@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.RecyclerView;
+package com.denzo.fetcher.RecyclerView;
 
 import android.content.Context;
 import android.util.AttributeSet;
