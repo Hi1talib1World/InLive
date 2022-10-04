@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.SearchView;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProvider;
