@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzo.in_live.Adapter.SearchAdapter;
 import com.denzo.in_live.R;
+import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.fragment.InitFragment;
 
 import butterknife.BindView;
@@ -74,7 +75,7 @@ public class SearchFragment extends InitFragment {
             query="";
 
         if (query.length()>=3)
-            Fetcher.ref(Constant.search+query+"&asset_type=global").setMethod(Method.GET).connect(SearchModel.class,response -> {
+            Fetcher.ref(Constant.search+query+"&asset_type=global").setMethod(Method.GET).connect(SearchModel.class, response -> {
                 getInitActivity().loading(false);
                 List<ContentItem> searchModels=response.getObject().getContent();
                 if (searchModels!=null)
