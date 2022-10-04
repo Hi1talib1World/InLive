@@ -15,6 +15,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzo.in_live.Adapter.SearchAdapter;
+import com.denzo.in_live.Model.search.ContentItem;
+import com.denzo.in_live.Model.search.SearchModel;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.fragment.InitFragment;
