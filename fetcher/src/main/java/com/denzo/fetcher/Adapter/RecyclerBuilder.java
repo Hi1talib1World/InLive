@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static com.androidlover5852.fetcher.Utils.Utils.dpToPx;
+import static com.denzo.fetcher.Utils.Utils.dpToPx;
 
 public abstract class RecyclerBuilder<T> extends EmptyRecyclerView.Adapter<BaseViewHolder> {
 
