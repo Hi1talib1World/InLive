@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.Model;
+package com.denzo.fetcher.Model;
 
 import com.google.gson.annotations.SerializedName;
 
