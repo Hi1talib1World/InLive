@@ -1,9 +1,9 @@
 package com.denzo.fetcher.Model;
 
-import com.androidlover5852.fetcher.Adapter.ListAdapter;
-import com.androidlover5852.fetcher.Adapter.RecyclerBuilder;
-import com.androidlover5852.fetcher.Fetcher.Fetcher;
-import com.androidlover5852.fetcher.Fetcher.JsonConverter;
+import com.denzo.fetcher.Adapter.ListAdapter;
+import com.denzo.fetcher.Adapter.RecyclerBuilder;
+import com.denzo.fetcher.Fetcher.Fetcher;
+import com.denzo.fetcher.Fetcher.JsonConverter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
