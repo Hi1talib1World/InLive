@@ -1,4 +1,4 @@
-package com.androidlover5852.fetcher.Adapter;
+package com.denzo.fetcher.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,10 +14,12 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.androidlover5852.fetcher.Holder.BaseViewHolder;
-import com.androidlover5852.fetcher.Model.OptionsBuilder;
-import com.androidlover5852.fetcher.RecyclerView.EmptyRecyclerView;
-import com.androidlover5852.fetcher.Utils.Utils;
+import com.denzo.fetcher.Holder.BaseViewHolder;
+import com.denzo.fetcher.Model.OptionsBuilder;
+import com.denzo.fetcher.RecyclerView.EmptyRecyclerView;
+import com.denzo.fetcher.Utils.Utils;
+import com.denzo.fetcher.Holder.BaseViewHolder;
+import com.denzo.fetcher.RecyclerView.EmptyRecyclerView;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerDrawable;
 
