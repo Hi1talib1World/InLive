@@ -1,7 +1,14 @@
 package com.denzo.in_live.Adapter;
 
 
+import android.content.Context;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.in_live.Activity.SeriesActivity;
+import com.denzo.in_live.R;
 
 public class SearchContent extends RecyclerBuilder<ContentItem> {
     public SearchContent(Context context, int layout) {
