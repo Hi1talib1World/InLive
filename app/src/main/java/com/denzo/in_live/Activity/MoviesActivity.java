@@ -3,14 +3,19 @@ package com.denzo.in_live.Activity;
 
 import android.os.Bundle;
 
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzo.fetcher.Fetcher.Fetcher;
+import com.denzo.fetcher.Utils.Utils;
+import com.denzo.in_live.Adapter.MoviesAdapter;
 import com.denzo.in_live.Model.Movies.MoviesModel;
 import com.denzo.in_live.R;
 
 import javax.annotation.Nullable;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.netty.util.Recycler;
 
 public class MoviesActivity extends InitActivity {
@@ -33,7 +38,7 @@ public class MoviesActivity extends InitActivity {
         api=bundle.getString("ApiUrl");
         title=bundle.getString("Title");
         int mNoOfColumns = calculateNoOfColumns();
-        mLayoutManager=Utils.gridLayoutManager(mNoOfColumns);
+        mLayoutManager= Utils.gridLayoutManager(mNoOfColumns);
         adapter=new MoviesAdapter(this,R.layout.holder_home_category);
         setTitle(title);
 
@@ -73,7 +78,7 @@ public class MoviesActivity extends InitActivity {
         }
         else url=api;
 
-        Fetcher.ref(url).setMethod(Method.GET).connect(MoviesModel.class,response -> {
+        Fetcher.ref(url).setMethod(Method.GET).connect(MoviesModel.class, response -> {
             moviesModel=response.getObject();
             if (moviesModel!=null)
             {
