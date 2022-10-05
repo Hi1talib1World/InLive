@@ -1,6 +1,6 @@
 package com.denzo.fetcher.Fetcher;
 
-import com.androidlover5852.fetcher.Model.Response;
+import com.denzo.fetcher.Model.Response;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
