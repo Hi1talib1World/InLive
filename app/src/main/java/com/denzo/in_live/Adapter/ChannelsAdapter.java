@@ -5,9 +5,11 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 
+import com.denzo.fetcher.Adapter.RecyclerBuilder;
+import com.denzo.fetcher.Holder.BaseViewHolder;
 import com.denzo.in_live.Model.Home.ContentItem;
 
-public class ChannelsAdapter extends RecyclerBuilder<ContentItem>{
+public class ChannelsAdapter extends RecyclerBuilder<ContentItem> {
     public ChannelsAdapter(Context context, int layout){
         super(context, layout);
     }
