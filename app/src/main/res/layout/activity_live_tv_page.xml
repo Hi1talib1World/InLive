@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/exo_black"
+        android:fontFamily="@font/exo_black1"
         android:text="Live TV"
         android:textColor="@android:color/white"
         android:textSize="18dp"

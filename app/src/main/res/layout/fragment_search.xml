@@ -119,7 +119,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="@font/exo_black"
+        android:fontFamily="@font/exo_black1"
         android:text="Search"
         android:textColor="@android:color/white"
         android:textSize="24sp"

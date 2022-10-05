@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="4dp"
-        android:fontFamily="@font/exo_black"
+        android:fontFamily="@font/exo_black1"
         android:text="Bollywood Movies"
         android:textColor="@android:color/white"
         android:textSize="26dp"

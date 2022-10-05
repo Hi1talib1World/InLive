@@ -22,7 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:fontFamily="@font/exo_black"
+        android:fontFamily="@font/exo_black1"
         android:text="TextView"
         android:textAlignment="viewStart"
         android:textColor="@android:color/white"
