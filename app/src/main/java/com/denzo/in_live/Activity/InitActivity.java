@@ -6,10 +6,18 @@ import android.text.TextUtils;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.in_live.Adapter.ShimmerNormalAdapter;
 import com.denzo.in_live.Model.Auth.ApiTokenModel;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Utils.SimplePlayer;
+import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.source.ProgressiveMediaSource;
+import com.google.android.exoplayer2.source.dash.DashMediaSource;
+import com.google.android.exoplayer2.source.hls.HlsMediaSource;
+import com.google.android.exoplayer2.source.smoothstreaming.SsMediaSource;
+import com.google.android.exoplayer2.util.Util;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
@@ -86,7 +94,7 @@ public class InitActivity extends FragmentActivity {
         super.onDestroy();
     }
 
-    protected MediaSource mediaSource(String url,String agent) {
+    protected MediaSource mediaSource(String url, String agent) {
         Uri mUri = Uri.parse(url);
         @C.ContentType int type = Util.inferContentType(mUri);
         DataSource.Factory dataSourceFactory = buildDataSourceFactory(agent);
