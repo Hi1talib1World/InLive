@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.denzo.fetcher.Holder.BaseViewHolder;
 import com.denzo.in_live.Activity.SeriesActivity;
 import com.denzo.in_live.Model.Series.SeriesModel;
 import com.denzo.in_live.R;
