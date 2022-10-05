@@ -2,8 +2,8 @@ package com.denzo.fetcher.Fetcher;
 
 import android.text.TextUtils;
 
-import com.androidlover5852.fetcher.Model.Response;
-import com.androidlover5852.fetcher.enums.Method;
+import com.denzo.fetcher.Model.Response;
+import com.denzo.fetcher.enums.Method;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.rw.velocity.RequestBuilder;
