@@ -18,6 +18,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.denzo.in_live.R;
+import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.google.android.exoplayer2.trackselection.MappingTrackSelector;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -39,15 +43,12 @@ public final class TrackSelectionDialog extends DialogFragment {
      * specified {@link DefaultTrackSelector} in its current state.
      */
     public static boolean willHaveContent(DefaultTrackSelector trackSelector) {
-        MappedTrackInfo mappedTrackInfo = trackSelector.getCurrentMappedTrackInfo();
+        MappingTrackSelector.MappedTrackInfo mappedTrackInfo = trackSelector.getCurrentMappedTrackInfo();
         return mappedTrackInfo != null && willHaveContent(mappedTrackInfo);
     }
 
-    /**
-     * Returns whether a track selection dialog will have content to display if initialized with the
-     * specified {@link MappedTrackInfo}.
-     */
-    public static boolean willHaveContent(MappedTrackInfo mappedTrackInfo) {
+
+    public static boolean willHaveContent(MappingTrackSelector.MappedTrackInfo mappedTrackInfo) {
         for (int i = 0; i < mappedTrackInfo.getRendererCount(); i++) {
             if (showTabForRenderer(mappedTrackInfo, i)) {
                 return true;
@@ -66,7 +67,7 @@ public final class TrackSelectionDialog extends DialogFragment {
      */
     public static TrackSelectionDialog createForTrackSelector(
             DefaultTrackSelector trackSelector, DialogInterface.OnDismissListener onDismissListener) {
-        MappedTrackInfo mappedTrackInfo =
+        MappingTrackSelector.MappedTrackInfo mappedTrackInfo =
                 Assertions.checkNotNull(trackSelector.getCurrentMappedTrackInfo());
         TrackSelectionDialog trackSelectionDialog = new TrackSelectionDialog();
         DefaultTrackSelector.Parameters parameters = trackSelector.getParameters();
@@ -142,7 +143,7 @@ public final class TrackSelectionDialog extends DialogFragment {
 
     private void init(
             int titleId,
-            MappedTrackInfo mappedTrackInfo,
+            MappingTrackSelector.MappedTrackInfo mappedTrackInfo,
             DefaultTrackSelector.Parameters initialParameters,
             boolean allowAdaptiveSelections,
             boolean allowMultipleOverrides,
@@ -305,7 +306,7 @@ public final class TrackSelectionDialog extends DialogFragment {
         }
 
         public void init(
-                MappedTrackInfo mappedTrackInfo,
+                MappingTrackSelector.MappedTrackInfo mappedTrackInfo,
                 int rendererIndex,
                 boolean initialIsDisabled,
                 @Nullable SelectionOverride initialOverride,
@@ -341,7 +342,7 @@ public final class TrackSelectionDialog extends DialogFragment {
         }
 
         @Override
-        public void onTrackSelectionChanged(boolean isDisabled, List<SelectionOverride> overrides) {
+        public void onTrackSelectionChanged(boolean isDisabled, List<DefaultTrackSelector.SelectionOverride> overrides) {
             this.isDisabled = isDisabled;
             this.overrides = overrides;
         }
