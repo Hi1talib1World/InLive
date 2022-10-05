@@ -1,6 +1,12 @@
 package com.denzo.in_live.Adapter;
 
 
+import android.view.View;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.denzo.fetcher.Adapter.RecyclerBuilder;
+import com.denzo.in_live.Model.Home.SliderItem;
 import com.denzo.in_live.R;
 
 public class SliderAdapter extends RecyclerBuilder<SliderItem> {
