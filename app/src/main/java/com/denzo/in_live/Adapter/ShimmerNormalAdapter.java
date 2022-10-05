@@ -5,8 +5,12 @@ import android.content.Context;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzo.fetcher.Adapter.RecyclerBuilder;
+import com.denzo.fetcher.Holder.BaseViewHolder;
 import com.denzo.in_live.R;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 public class ShimmerNormalAdapter extends RecyclerBuilder {
     public ShimmerNormalAdapter(Context context, int layout) {
@@ -28,4 +32,8 @@ public class ShimmerNormalAdapter extends RecyclerBuilder {
 
     }
 
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+    }
 }
