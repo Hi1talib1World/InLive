@@ -1,15 +1,31 @@
 package com.denzo.in_live.Activity;
 
+import static android.view.WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION;
+import static android.view.WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
+import static com.denzo.fetcher.Utils.Utils.capitalizeFirstLetter;
+
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.fragment.app.FragmentActivity;
 
 import com.denzo.fetcher.Fetcher.Fetcher;
+import com.denzo.fetcher.Utils.Utils;
 import com.denzo.in_live.Adapter.ShimmerNormalAdapter;
 import com.denzo.in_live.Model.Auth.ApiTokenModel;
 import com.denzo.in_live.R;
+import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.Utils.SimplePlayer;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.source.MediaSource;
@@ -17,13 +33,15 @@ import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;
 import com.google.android.exoplayer2.source.hls.HlsMediaSource;
 import com.google.android.exoplayer2.source.smoothstreaming.SsMediaSource;
+import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
 import com.google.android.exoplayer2.util.Util;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 
-import javax.sql.DataSource;
+
 
 public class InitActivity extends FragmentActivity {
     protected SimplePlayer simplePlayer=SimplePlayer.getInstance();
