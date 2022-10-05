@@ -15,10 +15,15 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzo.fetcher.Fetcher.Fetcher;
+import com.denzo.fetcher.Utils.Utils;
 import com.denzo.in_live.Activity.InitActivity;
+import com.denzo.in_live.Adapter.MoviesAdapter;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Model.Movies.MoviesModel;
 import com.denzo.in_live.Utils.Constant;
+import com.denzo.in_live.fragment.InitFragment;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
