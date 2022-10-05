@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 
 import androidx.preference.PreferenceManager;
 
-import com.androidlover5852.fetcher.Model.UserDataModel;
+import com.denzo.fetcher.Model.UserDataModel;
 import com.google.gson.Gson;
 
 public class AuthUser {
