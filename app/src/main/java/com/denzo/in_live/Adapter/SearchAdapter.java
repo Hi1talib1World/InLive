@@ -1,6 +1,16 @@
 package com.denzo.in_live.Adapter;
 
 
+import android.view.View;
+import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.denzo.fetcher.Utils.Utils;
+import com.denzo.in_live.R;
+
+import java.util.ArrayList;
+
 public class SearchAdapter extends RecyclerBuilder<ContentItem> {
 
     public SearchAdapter(Context context, int layout) {
