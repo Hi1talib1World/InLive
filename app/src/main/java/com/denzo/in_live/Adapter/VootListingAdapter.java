@@ -1,6 +1,7 @@
 package com.denzo.in_live.Adapter;
 
 
+import android.content.Context;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.TextView;
@@ -8,9 +9,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzo.fetcher.Adapter.RecyclerBuilder;
 import com.denzo.fetcher.Holder.BaseViewHolder;
 import com.denzo.fetcher.Utils.Utils;
+import com.denzo.in_live.Model.Voot.ContentItem;
 import com.denzo.in_live.R;
+
+import java.util.ArrayList;
 
 public class VootListingAdapter extends RecyclerBuilder<ContentItem> {
     public VootListingAdapter(Context context, int layout) {
