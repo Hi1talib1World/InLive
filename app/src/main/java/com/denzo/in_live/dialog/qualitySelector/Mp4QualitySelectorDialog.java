@@ -12,15 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.androidlover5852.fetcher.Adapter.RecyclerBuilder;
-import com.androidlover5852.fetcher.Holder.BaseViewHolder;
-import com.androidlover5852.fetcher.Utils.Utils;
 import com.denzo.in_live.Model.MoviePlayback.VideosItem;
 import com.denzo.in_live.R;
 import com.google.android.exoplayer2.ui.TrackSelectionView;
 
-import net.vidflix.Model.MoviePlayback.VideosItem;
-import net.vidflix.R;
+
 
 import java.util.List;
 
