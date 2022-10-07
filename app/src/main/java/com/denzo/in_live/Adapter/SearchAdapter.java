@@ -6,10 +6,13 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzo.fetcher.Adapter.RecyclerBuilder;
 import com.denzo.fetcher.Utils.Utils;
+import com.denzo.in_live.Model.search.ContentItem;
 import com.denzo.in_live.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SearchAdapter extends RecyclerBuilder<ContentItem> {
 
