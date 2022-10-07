@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,10 +17,19 @@ import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
+import com.denzo.fetcher.Fetcher.Fetcher;
+import com.denzo.fetcher.enums.Method;
+import com.denzo.in_live.Adapter.HomeDataAdapter;
+import com.denzo.in_live.Adapter.SliderAdapter;
 import com.denzo.in_live.Model.Home.HomeModel;
 import com.denzo.in_live.R;
+import com.denzo.in_live.Utils.Constant;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 import java.util.HashMap;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class HomeFragment extends InitFragment {
 
