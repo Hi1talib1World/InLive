@@ -4,8 +4,12 @@ package com.denzo.in_live.Adapter;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import android.content.Context;
+
 import com.bumptech.glide.Glide;
 import com.denzo.fetcher.Adapter.RecyclerBuilder;
+import com.denzo.fetcher.Holder.BaseViewHolder;
 import com.denzo.in_live.Model.Home.SliderItem;
 import com.denzo.in_live.R;
 
