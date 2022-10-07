@@ -1,6 +1,8 @@
 package com.denzo.in_live.Adapter;
 
 
+import static com.denzo.fetcher.Utils.Utils.dpToPx;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
@@ -12,12 +14,15 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.bumptech.glide.Glide;
+import com.denzo.fetcher.Adapter.RecyclerBuilder;
 import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.fetcher.Holder.BaseViewHolder;
 import com.denzo.fetcher.enums.Method;
 import com.denzo.in_live.Activity.MoviesDetailsActivity;
 import com.denzo.in_live.Model.MoviePlayback.MoviePlayBackModel;
 import com.denzo.in_live.Model.Series.SeriesModel;
+import com.denzo.in_live.Model.Voot.ContentItem;
 import com.denzo.in_live.R;
 import com.google.android.material.card.MaterialCardView;
 
