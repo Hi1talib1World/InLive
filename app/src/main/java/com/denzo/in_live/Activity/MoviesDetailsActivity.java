@@ -1,6 +1,8 @@
 package com.denzo.in_live.Activity;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -10,9 +12,15 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.denzo.in_live.Model.MoviePlayback.MoviePlayBackModel;
 import com.denzo.in_live.Model.MoviePlayback.VideosItem;
 import com.denzo.in_live.R;
+import com.denzo.in_live.dialog.qualitySelector.Mp4QualitySelectorDialog;
 import com.denzo.in_live.task.DecoderTask;
+import com.denzo.in_live.task.RedirectTask;
+import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.util.Util;
 import com.google.gson.Gson;
 
 import java.io.IOException;
