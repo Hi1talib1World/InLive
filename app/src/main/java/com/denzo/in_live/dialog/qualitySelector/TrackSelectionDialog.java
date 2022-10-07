@@ -19,8 +19,10 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.denzo.in_live.R;
 import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
 import com.google.android.exoplayer2.trackselection.MappingTrackSelector;
+import com.google.android.exoplayer2.ui.TrackSelectionView;
 import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.material.tabs.TabLayout;
 
@@ -309,7 +311,7 @@ public final class TrackSelectionDialog extends DialogFragment {
                 MappingTrackSelector.MappedTrackInfo mappedTrackInfo,
                 int rendererIndex,
                 boolean initialIsDisabled,
-                @Nullable SelectionOverride initialOverride,
+                @Nullable DefaultTrackSelector.SelectionOverride initialOverride,
                 boolean allowAdaptiveSelections,
                 boolean allowMultipleOverrides) {
             this.mappedTrackInfo = mappedTrackInfo;
