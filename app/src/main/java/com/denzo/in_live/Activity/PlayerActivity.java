@@ -1,12 +1,16 @@
 package com.denzo.in_live.Activity;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.denzo.in_live.Model.MoviePlayback.VideosItem;
 import com.denzo.in_live.R;
+import com.denzo.in_live.Utils.Constant;
+import com.denzo.in_live.datasource.CustomDataSourcesFactory;
 import com.denzo.in_live.dialog.qualitySelector.TrackSelectionDialog;
 import com.denzo.in_live.task.FetchZeeDrm;
 import com.google.android.exoplayer2.C;
@@ -17,8 +21,16 @@ import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSourceEventListener;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.google.android.exoplayer2.trackselection.RandomTrackSelection;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.ui.PlayerView;
+import com.google.firebase.firestore.EventListener;
+
+import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.sql.DataSource;
 
