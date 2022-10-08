@@ -6,6 +6,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.os.Handler;
+import androidx.annotation.Nullable;
 
 import com.denzo.in_live.Model.MoviePlayback.VideosItem;
 import com.denzo.in_live.R;
@@ -16,7 +18,10 @@ import com.denzo.in_live.task.FetchZeeDrm;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Player;
+
 import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.source.LoadEventInfo;
+import com.google.android.exoplayer2.source.MediaLoadData;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSourceEventListener;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;
@@ -26,13 +31,15 @@ import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.firebase.firestore.EventListener;
+import com.google.android.exoplayer2.upstream.DataSource;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import javax.sql.DataSource;
 
 public class PlayerActivity extends InitActivity implements Player.EventListener, View.OnClickListener{
     private PlayerView playerView;
