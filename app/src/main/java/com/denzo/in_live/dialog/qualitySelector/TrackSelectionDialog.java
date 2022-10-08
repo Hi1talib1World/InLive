@@ -87,7 +87,7 @@ public final class TrackSelectionDialog extends DialogFragment {
                                 .setRendererDisabled(
                                         /* rendererIndex= */ i,
                                         trackSelectionDialog.getIsDisabled(/* rendererIndex= */ i));
-                        List<SelectionOverride> overrides =
+                        List<DefaultTrackSelector.SelectionOverride> overrides =
                                 trackSelectionDialog.getOverrides(/* rendererIndex= */ i);
                         if (!overrides.isEmpty()) {
                             builder.setSelectionOverride(
@@ -190,7 +190,7 @@ public final class TrackSelectionDialog extends DialogFragment {
      * @param rendererIndex Renderer index.
      * @return The list of track selection overrides for this renderer.
      */
-    public List<SelectionOverride> getOverrides(int rendererIndex) {
+    public List<DefaultTrackSelector.SelectionOverride> getOverrides(int rendererIndex) {
         TrackSelectionViewFragment rendererView = tabFragments.get(rendererIndex);
         return rendererView == null ? Collections.emptyList() : rendererView.overrides;
     }
@@ -234,7 +234,7 @@ public final class TrackSelectionDialog extends DialogFragment {
         return dialogView;
     }
 
-    private static boolean showTabForRenderer(MappedTrackInfo mappedTrackInfo, int rendererIndex) {
+    private static boolean showTabForRenderer(MappingTrackSelector.MappedTrackInfo mappedTrackInfo, int rendererIndex) {
         TrackGroupArray trackGroupArray = mappedTrackInfo.getTrackGroups(rendererIndex);
         if (trackGroupArray.length == 0) {
             return false;
@@ -294,13 +294,13 @@ public final class TrackSelectionDialog extends DialogFragment {
     public static final class TrackSelectionViewFragment extends Fragment
             implements TrackSelectionView.TrackSelectionListener {
 
-        private MappedTrackInfo mappedTrackInfo;
+        private MappingTrackSelector.MappedTrackInfo mappedTrackInfo;
         private int rendererIndex;
         private boolean allowAdaptiveSelections;
         private boolean allowMultipleOverrides;
 
         /* package */ boolean isDisabled;
-        /* package */ List<SelectionOverride> overrides;
+        /* package */ List<DefaultTrackSelector.SelectionOverride> overrides;
 
         public TrackSelectionViewFragment() {
             // Retain instance across activity re-creation to prevent losing access to init data.
