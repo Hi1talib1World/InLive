@@ -15,6 +15,8 @@ import androidx.annotation.Nullable;
 import com.denzo.in_live.Model.Series.SeasonListModel;
 import com.denzo.in_live.R;
 
+import java.util.List;
+
 public class SpinnerAdapter extends ArrayAdapter<SeasonListModel> {
 
     LayoutInflater inflate;
