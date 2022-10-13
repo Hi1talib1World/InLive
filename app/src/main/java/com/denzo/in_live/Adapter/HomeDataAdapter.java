@@ -17,9 +17,6 @@ import com.denzo.fetcher.Utils.Utils;
 import com.denzo.in_live.Model.Home.ContentItem;
 import com.denzo.in_live.Model.Home.DataItem;
 import com.denzo.in_live.R;
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 
