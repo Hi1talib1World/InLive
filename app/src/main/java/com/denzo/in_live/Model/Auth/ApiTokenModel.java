@@ -4,6 +4,7 @@ import android.util.Base64;
 
 import androidx.annotation.NonNull;
 
+import com.denzo.in_live.BuildConfig;
 import com.denzo.in_live.task.DecoderTask;
 
 import java.io.Serializable;
@@ -20,7 +21,7 @@ public class ApiTokenModel extends HashMap<String,String> implements Serializabl
         byte[] salt=Base64.decode(decoderTask.decrypt(salt()),Base64.DEFAULT);
         String version= DecoderTask
                 .getInstance()
-                .encrypt(Base64.decode(varSZION(),Base64.DEFAULT),BuildConfig.VERSION_NAME.getBytes());
+                .encrypt(Base64.decode(varSZION(),Base64.DEFAULT), BuildConfig.VERSION_NAME.getBytes());
         put("api-auth".toUpperCase(),sha(decoderTask.addBytes(timestamp.getBytes().length+sec.length+salt.length,timestamp.getBytes(),sec,salt)));
         put("timestamp".toUpperCase(),String.valueOf(timestamp));
         put("User-Agent","vidflix/1.0");
