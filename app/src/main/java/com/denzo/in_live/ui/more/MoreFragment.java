@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.denzo.fetcher.Utils.Utils;
 import com.denzo.in_live.Adapter.MoreAdapter;
 import com.denzo.in_live.BuildConfig;
 import com.denzo.in_live.R;
@@ -26,7 +27,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.internal.Utils;
 
 public class MoreFragment extends InitFragment {
 
