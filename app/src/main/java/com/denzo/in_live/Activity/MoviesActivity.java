@@ -3,11 +3,13 @@ package com.denzo.in_live.Activity;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.fetcher.Utils.Utils;
+import com.denzo.fetcher.enums.Method;
 import com.denzo.in_live.Adapter.MoviesAdapter;
 import com.denzo.in_live.Model.Movies.MoviesModel;
 import com.denzo.in_live.R;
