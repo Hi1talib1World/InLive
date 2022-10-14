@@ -118,7 +118,7 @@ public final class TrackSelectionDialog extends DialogFragment {
      */
     public static TrackSelectionDialog createForMappedTrackInfoAndParameters(
             int titleId,
-            MappedTrackInfo mappedTrackInfo,
+            MappingTrackSelector.MappedTrackInfo mappedTrackInfo,
             DefaultTrackSelector.Parameters initialParameters,
             boolean allowAdaptiveSelections,
             boolean allowMultipleOverrides,
