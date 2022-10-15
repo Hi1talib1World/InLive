@@ -103,10 +103,10 @@ public final class TrackSelectionDialog extends DialogFragment {
     }
 
     /**
-     * Creates a dialog for given {@link MappedTrackInfo} and {@link DefaultTrackSelector.Parameters}.
+     * Creates a dialog for given {@link MappingTrackSelector.MappedTrackInfo} and {@link DefaultTrackSelector.Parameters}.
      *
      * @param titleId The resource id of the dialog title.
-     * @param mappedTrackInfo The {@link MappedTrackInfo} to display.
+     * @param mappedTrackInfo The {@link MappingTrackSelector.MappedTrackInfo} to display.
      * @param initialParameters The {@link DefaultTrackSelector.Parameters} describing the initial
      *     track selection.
      * @param allowAdaptiveSelections Whether adaptive selections (consisting of more than one track)
