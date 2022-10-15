@@ -16,6 +16,7 @@ import com.denzo.in_live.Model.Voot.ContentItem;
 import com.denzo.in_live.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class VootListingAdapter extends RecyclerBuilder<ContentItem> {
     public VootListingAdapter(Context context, int layout) {
