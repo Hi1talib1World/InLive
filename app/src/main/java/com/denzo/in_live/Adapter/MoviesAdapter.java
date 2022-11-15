@@ -1,5 +1,7 @@
 package com.denzo.in_live.Adapter;
 
+import static com.denzo.fetcher.Utils.Utils.dpToPx;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
