@@ -32,6 +32,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(path: ':fetcher')
     implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
 
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
