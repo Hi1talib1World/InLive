@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/DarkAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,7 +16,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="32dp"
-            android:src="@drawable/main_loader_logo"
+            android:src="@drawable/inlive"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +38,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/exo_black1"
-                android:text="App Version"
-                android:textColor="@color/colorAccent"
+                android:text="App By"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
