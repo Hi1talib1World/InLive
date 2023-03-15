@@ -40,6 +40,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static com.google.android.exoplayer2.Player.STATE_BUFFERING;
+import static com.google.android.exoplayer2.Player.STATE_IDLE;
+import static com.google.android.exoplayer2.Player.STATE_READY;
 
 public class PlayerActivity extends InitActivity implements Player.EventListener, View.OnClickListener{
     private PlayerView playerView;
