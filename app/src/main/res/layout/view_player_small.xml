@@ -16,7 +16,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:src="@drawable/dummy_img"
+        android:src="@drawable/inlive"
         android:scaleType="fitXY"
         android:id="@+id/img_thumbnail"
         android:layout_height="match_parent"/>
