@@ -74,6 +74,7 @@ dependencies {
     //dexter permissions
     implementation "com.karumi:dexter:5.0.0"
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
+    implementation 'com.google.android.exoplayer:exoplayer:2.11.8'
 
 
     // circular imageview
