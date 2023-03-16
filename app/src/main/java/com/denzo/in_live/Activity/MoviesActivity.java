@@ -14,18 +14,19 @@ import com.denzo.in_live.Adapter.MoviesAdapter;
 import com.denzo.in_live.Model.Movies.MoviesModel;
 import com.denzo.in_live.R;
 
-import javax.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.netty.util.Recycler;
+
 
 public class MoviesActivity extends InitActivity {
     private String api;
     private MoviesAdapter adapter;
     @BindView(R.id.rv_movies)
     RecyclerView rvMovies;
-    private MoviesModel Mm;
+    private MoviesModel moviesModel;
     private RecyclerView.LayoutManager mLayoutManager;
     private boolean is_pagination;
     private String title;
