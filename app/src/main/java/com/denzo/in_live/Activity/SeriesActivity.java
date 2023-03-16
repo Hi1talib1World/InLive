@@ -27,6 +27,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
+import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.fetcher.Utils.Utils;
 import com.denzo.in_live.Adapter.EpisodeAdapter;
 import com.denzo.in_live.Model.Series.SeasonListModel;
