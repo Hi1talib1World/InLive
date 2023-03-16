@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
 import com.bumptech.glide.Glide;
 import com.denzo.fetcher.Adapter.RecyclerBuilder;
 import com.denzo.fetcher.Fetcher.Fetcher;
@@ -23,7 +25,7 @@ import com.denzo.in_live.Model.Movies.ContentItem;
 import com.denzo.in_live.Model.Series.SeriesModel;
 import com.denzo.in_live.R;
 import com.google.android.material.card.MaterialCardView;
-import com.google.firebase.internal.NonNull;
+
 
 public class MoviesAdapter extends RecyclerBuilder<ContentItem> {
     public MoviesAdapter(Context context, int layout) {
