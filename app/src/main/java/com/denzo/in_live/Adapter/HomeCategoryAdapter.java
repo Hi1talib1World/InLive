@@ -1,5 +1,8 @@
 package com.denzo.in_live.Adapter;
 
+import static com.denzo.fetcher.Utils.Utils.capitalizeFirstLetter;
+import static com.denzo.fetcher.Utils.Utils.dpToPx;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
