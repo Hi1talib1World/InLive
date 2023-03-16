@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzo.fetcher.Utils.Utils;
 import com.denzo.in_live.Adapter.MoreAdapter;
+import com.denzo.in_live.BuildConfig;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Model.More.MoreModel;
 import com.denzo.in_live.fragment.InitFragment;
