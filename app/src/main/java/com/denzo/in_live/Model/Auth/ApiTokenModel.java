@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class ApiTokenModel extends HashMap<String,String> implements Serializable {
-    private String timestamp=String.valueOf(new Date().getTime);
+    private String timestamp=String.valueOf(new Date().getTime());
 
     public ApiTokenModel(){
         DecoderTask decoderTask= DecoderTask.getInstance();
