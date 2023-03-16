@@ -1,5 +1,7 @@
 package com.denzo.in_live.task;
 
+import static com.denzo.in_live.Utils.Constant.agent;
+
 import android.content.Context;
 import android.os.AsyncTask;
 
@@ -13,7 +15,6 @@ import com.google.android.exoplayer2.drm.ExoMediaDrm;
 import com.google.android.exoplayer2.drm.ExoMediaCrypto;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 
-import com.denzo.in_live.Utils.Constant.agent;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
