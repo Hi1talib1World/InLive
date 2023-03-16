@@ -17,7 +17,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +29,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.fetcher.Utils.Utils;
+import com.denzo.fetcher.enums.Method;
 import com.denzo.in_live.Adapter.EpisodeAdapter;
+import com.denzo.in_live.Adapter.SpinnerAdapter;
 import com.denzo.in_live.Model.Series.SeasonListModel;
 import com.denzo.in_live.Model.Series.SeriesModel;
 import com.denzo.in_live.R;
@@ -37,7 +39,7 @@ import com.denzo.in_live.task.DecoderTask;
 import com.google.gson.Gson;
 
 
-import java.lang.reflect.Method;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
