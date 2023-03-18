@@ -65,7 +65,7 @@ public class MoreFragment extends InitFragment {
     private void Items(){
         MoreModel[] moreModel=new MoreModel[]{
                 new MoreModel("APP","Version\n"+ BuildConfig.FAKE_VERSION),
-                new MoreModel("COPYRIGHT","Copyright @VIDFLIX All rights reserved\nTerms and Policies"),
+                new MoreModel("COPYRIGHT","Copyright @In-Live All rights reserved\nTerms and Policies"),
                 new MoreModel("Changelog","Checkout what's new"),
                 new MoreModel("Check for Updates","Get latest available apk"),
                 new MoreModel("Telegram","Join to report issues and request a feature"),
