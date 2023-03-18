@@ -25,7 +25,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.bumptech.glide.Glide;
 import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.fetcher.Utils.Utils;
