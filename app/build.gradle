@@ -9,6 +9,7 @@ android {
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 onesignal_app_id: '941d0378-4580-480d-967b-59ebf0d91f71',
@@ -64,6 +65,8 @@ dependencies {
     implementation 'com.jakewharton:butterknife:10.2.1'
     implementation 'com.onesignal:OneSignal:3.13.2'
     implementation 'com.squareup.okhttp3:okhttp:4.6.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 
