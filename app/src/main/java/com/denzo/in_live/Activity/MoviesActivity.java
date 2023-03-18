@@ -33,7 +33,7 @@ public class MoviesActivity extends InitActivity {
     int i=1;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
-        super.onCreate(savedInstancesState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
         ButterKnife.bind(this);
         bundle=getIntent().getExtras();
