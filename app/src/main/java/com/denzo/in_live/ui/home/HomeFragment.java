@@ -81,7 +81,7 @@ public class HomeFragment extends InitFragment {
                         homefbs.setVisibility(View.GONE);
                     }else Toast.makeText(getContext(),"Something went wrong", Toast.LENGTH_SHORT).show();
                 });
-        getInitActivity().settingStatusBarTransparent();
+        //getInitActivity().settingStatusBarTransparent();
         rvSlider.addItemDecoration(new LinePagerIndicatorDecoration());
 
         return root;
