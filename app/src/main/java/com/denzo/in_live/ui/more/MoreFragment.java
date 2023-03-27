@@ -46,11 +46,11 @@ public class MoreFragment extends InitFragment {
         View root = inflater.inflate(R.layout.fragment_more, container, false);
         adapter=new MoreAdapter(getContext(),R.layout.holder_more);
         ButterKnife.bind(this,root);
-        getInitActivity().enableBack(false);
-        getInitActivity().showToolbar(true);
-        getInitActivity().setTitle("More");
-        getInitActivity().loading(false);
-        getInitActivity().showStatusBar();
+        //getInitActivity().enableBack(false);
+        //getInitActivity().showToolbar(true);
+        //getInitActivity().setTitle("More");
+        //getInitActivity().loading(false);
+        //getInitActivity().showStatusBar();
 
         Animation slide_from_top = AnimationUtils.loadAnimation(getContext(), R.anim.item_animation_fall_down);
         imageView.startAnimation(slide_from_top);
