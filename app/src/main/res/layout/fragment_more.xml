@@ -18,7 +18,7 @@
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_gravity="center"
-            android:src="@drawable/main_loader_logo" />
+            android:src="@drawable/inlive" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
