@@ -20,10 +20,13 @@ import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Player;
 
 import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.source.LoadEventInfo;
+import com.google.android.exoplayer2.source.MediaLoadData;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSourceEventListener;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.google.android.exoplayer2.trackselection.ExoTrackSelection;
 import com.google.android.exoplayer2.trackselection.RandomTrackSelection;
 import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
@@ -139,7 +142,7 @@ public class PlayerActivity extends InitActivity implements Player.EventListener
         trackSelectionDialog.show(getSupportFragmentManager(),  null);
     }
     private DefaultTrackSelector trackSelector(){
-        TrackSelection.Factory trackSelectionFactory = new RandomTrackSelection.Factory();
+        ExoTrackSelection.Factory trackSelectionFactory = new RandomTrackSelection.Factory();
         DefaultTrackSelector trackSelector = new DefaultTrackSelector(this, trackSelectionFactory);;
         DefaultTrackSelector.ParametersBuilder builder =
                 new DefaultTrackSelector.ParametersBuilder(this);
