@@ -13,20 +13,20 @@
         <item name="colorOnSecondary">@color/MatteBlack</item>
 
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
 
         <!-- Material 3 specific attributes -->
         <item name="colorSurface">@color/MatteBlack</item>
         <item name="colorOnSurface">@color/white</item>
-        <item name="colorBackground">@color/MatteBlack</item>
+        <item name="android:colorBackground">@color/MatteBlack</item>
         <item name="colorOnBackground">@color/white</item>
     </style>
 
     <style name="MyAlertDialogStyle" parent="Theme.Material3.DayNight.Dialog.Alert">
         <!-- Used for the buttons -->
-        <item name="colorAccent">@color/RedAccent</item>
+        <item name="colorPrimary">@color/RedAccent</item>
         <!-- Used for the background -->
-        <item name="android:background">@color/DarkAccent</item>
+        <item name="colorSurface">@color/DarkAccent</item>
     </style>
 
 </resources>
