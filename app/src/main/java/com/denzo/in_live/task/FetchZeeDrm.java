@@ -24,7 +24,7 @@ public class FetchZeeDrm extends AsyncTask<Void,Void,Void> {
     private Context context;
     private String licenseUrl;
     private CallBack callBack;
-    private DrmSessionManager<ExoMediaCrypto> drmSessionManager;
+    private DrmSessionManager drmSessionManager;
     public FetchZeeDrm(String licenseUrl,Context context) {
         this.licenseUrl=licenseUrl;
         this.context= new WeakReference<>(context).get();
