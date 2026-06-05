@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
 
 android {
     compileSdkVersion 33
-    buildToolsVersion "29.0.3"
+
 
     defaultConfig {
         applicationId "com.denzo.in_live"
