@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     namespace 'com.denzo.in_live'
-    compileSdkVersion 33
+    compileSdkVersion 34
 
 
     defaultConfig {
