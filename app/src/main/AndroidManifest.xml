@@ -19,16 +19,22 @@
 
 
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:name=".Activity.SplashActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".Activity.InitActivity" android:exported="false" />
+        <activity android:name=".Activity.MoviesActivity" android:exported="false" />
+        <activity android:name=".Activity.PlayerActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:exported="false" />
+        <activity android:name=".Activity.SeriesActivity" android:exported="false" />
+        <activity android:name=".Activity.VootListingActivity" android:exported="false" />
+        <activity android:name=".Activity.MoviesDetailsActivity" android:exported="false" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
