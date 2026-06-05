@@ -8,9 +8,6 @@ import com.denzo.in_live.Model.Update.UpdateModel;
 import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.dialog.update.UpdateDialog;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.onesignal.OneSignal;
 
 import androidx.appcompat.app.AppCompatActivity;
