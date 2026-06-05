@@ -14,9 +14,7 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
-            android:background="@color/DarkAccent"
-            android:layout_height="?attr/actionBarSize"
-            style="@style/AppTheme" >
+            android:layout_height="?attr/actionBarSize">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -25,18 +23,19 @@
                     android:id="@+id/btBack"
                     android:onClick="onToolbarBackPressed"
                     android:src="@drawable/left_arrow"
+                    app:tint="?attr/colorOnSurface"
                     android:layout_height="match_parent"/>
 
                 <TextView
                     android:fontFamily="@font/exo_black1"
                     android:layout_width="match_parent"
-                    android:layout_toRightOf="@id/btBack"
+                    android:layout_toEndOf="@id/btBack"
                     android:gravity="center"
                     android:layout_centerInParent="true"
                     android:maxLines="1"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/colorOnSurface"
                     android:id="@+id/title"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:layout_height="wrap_content"/>
             </RelativeLayout>
         </com.google.android.material.appbar.MaterialToolbar>
