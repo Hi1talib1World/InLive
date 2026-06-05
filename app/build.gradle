@@ -24,6 +24,10 @@ android {
         buildConfigField "String", "FAKE_VERSION", "\"0.1\""
     }
 
+    buildFeatures {
+        buildConfig true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
