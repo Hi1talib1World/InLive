@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="250dp"
-    android:background="@color/DarkAccent"
-    android:orientation="vertical"
-    android:padding="10dp"
-    android:layout_height="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:id="@+id/tv_title"
-        android:textColor="@color/RedAccent"
-        android:layout_height="wrap_content"/>
-    <ListView
-        android:layout_width="match_parent"
-        android:id="@+id/list_changelog"
-        android:layout_height="wrap_content"/>
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/bt_update"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_gravity="right"
-        android:textColor="@color/white"
-        android:background="@color/shimmer"
-        android:text="Update" />
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:id="@+id/tv_title"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_height="wrap_content"/>
 
-</LinearLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/list_changelog"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_update"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="24dp"
+            android:text="Update" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
