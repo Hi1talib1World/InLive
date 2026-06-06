@@ -12,6 +12,8 @@ import com.denzo.fetcher.enums.Method;
 import com.denzo.in_live.Adapter.MoviesAdapter;
 import com.denzo.in_live.Model.Movies.MoviesModel;
 import com.denzo.in_live.R;
+import com.denzo.in_live.Utils.Constant;
+import com.denzo.in_live.Utils.MockData;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -80,7 +82,10 @@ public class MoviesActivity extends InitActivity {
         }
         else url=api;
 
-        Fetcher.ref(url).setMethod(Method.GET).connect(MoviesModel.class, response -> {
+        Fetcher.ref(url)
+                .setMethod(Method.GET)
+                .setMocked(Constant.MOCK ? MockData.MOVIES_LIST_JSON : null)
+                .connect(MoviesModel.class, response -> {
             moviesModel=response.getObject();
             if (moviesModel!=null)
             {
