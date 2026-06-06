@@ -2,6 +2,7 @@ package com.denzo.in_live.Utils;
 
 
 public class Constant {
+    public static final boolean MOCK = true;
     //TODO:Secure these apis
     private static final String root = "https://api.vidflix.net/v2/api/";
     public static final String home = root+"home/";
