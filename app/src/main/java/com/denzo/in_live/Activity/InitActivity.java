@@ -20,7 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import androidx.fragment.app.FragmentActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.fetcher.Utils.Utils;
@@ -49,7 +49,7 @@ import java.util.List;
 
 
 
-public class InitActivity extends FragmentActivity {
+public class InitActivity extends AppCompatActivity {
     protected SimplePlayer simplePlayer=SimplePlayer.getInstance();
     private boolean isLoading;
     private ShimmerNormalAdapter shimmerNormalAdapter;
