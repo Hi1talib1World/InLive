@@ -9,7 +9,6 @@ import com.denzo.in_live.Model.Update.UpdateModel;
 import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.dialog.update.UpdateDialog;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.onesignal.OneSignal;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -28,8 +27,6 @@ public class MainActivity extends InitActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
-
-        OneSignal.initWithContext(this, "941d0378-4580-480d-967b-59ebf0d91f71");
 
         Fetcher.ref(Constant.update).setMethod(Method.GET).connect(UpdateModel.class, response -> {
             if (response.getObject()!=null)
