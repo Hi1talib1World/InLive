@@ -4,19 +4,19 @@ import android.os.Bundle;
 
 import com.denzo.fetcher.Fetcher.Fetcher;
 import com.denzo.fetcher.enums.Method;
+import com.denzo.in_live.Activity.InitActivity;
 import com.denzo.in_live.Model.Update.UpdateModel;
 import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.dialog.update.UpdateDialog;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.onesignal.OneSignal;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends InitActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
