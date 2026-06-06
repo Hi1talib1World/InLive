@@ -18,6 +18,8 @@ import com.denzo.fetcher.enums.Method;
 import com.denzo.in_live.Adapter.VootListingAdapter;
 import com.denzo.in_live.Model.Voot.VootListModel;
 import com.denzo.in_live.R;
+import com.denzo.in_live.Utils.Constant;
+import com.denzo.in_live.Utils.MockData;
 import com.denzo.in_live.fragment.InitFragment;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
@@ -61,7 +63,10 @@ public class LiveTvCategoryFragment extends InitFragment {
     private void fetch() {
         String url = "https://api.vidflix.net/v2/api/premium/11/?name=home&is_series=4";
 
-        Fetcher.ref(url).setMethod(Method.GET).connect(VootListModel.class, response -> {
+        Fetcher.ref(url)
+                .setMethod(Method.GET)
+                .setMocked(Constant.MOCK ? MockData.TV_CHANNELS_JSON : null)
+                .connect(VootListModel.class, response -> {
             getInitActivity().loading(false);
             if (response.getObject() != null && response.getObject().getContent() != null) {
                 adapter.setList(response.getObject().getContent());
