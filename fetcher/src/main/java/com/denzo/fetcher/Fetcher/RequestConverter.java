@@ -37,6 +37,7 @@ public class RequestConverter {
     private HashMap<String,String> headers;
     private HashMap<String,String> token;
     private LinkedHashSet<String> certs;
+    private String mockResponse;
 
     public RequestConverter requestUrl(String url){
         this.url=url;
@@ -49,6 +50,11 @@ public class RequestConverter {
 
     public RequestConverter setMethod(Method method) {
         this.method=method;
+        return this;
+    }
+
+    public RequestConverter setMocked(String mockResponse) {
+        this.mockResponse = mockResponse;
         return this;
     }
 
@@ -125,6 +131,9 @@ public class RequestConverter {
             requestBuilder.withHeaders(headers);
         if (certs!=null)
             requestBuilder.setCerts(certs);
+
+        if (mockResponse != null)
+            requestBuilder.setMocked(mockResponse);
 
         requestBuilder
                 .connect(output -> {
