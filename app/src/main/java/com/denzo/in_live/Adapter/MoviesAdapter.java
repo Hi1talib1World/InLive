@@ -24,6 +24,8 @@ import com.denzo.in_live.Model.MoviePlayback.MoviePlayBackModel;
 import com.denzo.in_live.Model.Movies.ContentItem;
 import com.denzo.in_live.Model.Series.SeriesModel;
 import com.denzo.in_live.R;
+import com.denzo.in_live.Utils.Constant;
+import com.denzo.in_live.Utils.MockData;
 import com.google.android.material.card.MaterialCardView;
 
 
@@ -52,6 +54,7 @@ public class MoviesAdapter extends RecyclerBuilder<ContentItem> {
         view.setEnabled(false);
         if (model.getIsSeries().equals("0") || model.getIsSeries().equals("4")){
             Fetcher.ref(model.getApiUrl()).setMethod(Method.GET)
+                    .setMocked(Constant.MOCK ? MockData.MOVIE_DETAILS_JSON : null)
                     .connect(MoviePlayBackModel.class, response -> {
                         view.setEnabled(true);
                         if (response.getObject()!=null)
@@ -65,7 +68,9 @@ public class MoviesAdapter extends RecyclerBuilder<ContentItem> {
         }
         else if (model.getIsSeries().equals("1")){
 
-            Fetcher.ref(model.getApiUrl()).setMethod(Method.GET).connect(SeriesModel.class, response -> {
+            Fetcher.ref(model.getApiUrl()).setMethod(Method.GET)
+                    .setMocked(Constant.MOCK ? MockData.SERIES_DETAILS_JSON : null)
+                    .connect(SeriesModel.class, response -> {
                 view.setEnabled(true);
                 SeriesModel seriesModel=response.getObject();
                 Bundle bundle=new Bundle();
