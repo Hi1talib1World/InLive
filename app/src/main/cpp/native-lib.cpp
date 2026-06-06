@@ -4,7 +4,7 @@
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_net_vidflix_Activity_SplashActivity_casdAA(JNIEnv *env, jobject thiz) {
+Java_com_denzo_in_1live_Activity_SplashActivity_casdAA(JNIEnv *env, jobject thiz) {
     jclass native_context = env->GetObjectClass(thiz);
 
     // context.getPackageManager()
@@ -46,30 +46,30 @@ Java_net_vidflix_Activity_SplashActivity_casdAA(JNIEnv *env, jobject thiz) {
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_net_vidflix_task_DecoderTask_mali(JNIEnv *env, jobject instance) {
+Java_com_denzo_in_1live_task_DecoderTask_mali(JNIEnv *env, jobject instance) {
     std::string ap = "_ZN10__caaabiv119__start_handles";
     return env->NewStringUTF(ap.c_str());
 }
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_net_vidflix_task_DecoderTask_toAo(JNIEnv *env, jobject instance) {
+Java_com_denzo_in_1live_task_DecoderTask_toAo(JNIEnv *env, jobject instance) {
     std::string az = "O+poSr5nJhAy98ClpdgeZMTXklYHX0pS4ayn1UGJ42zRK/eKp+lt+QAwew2dUEPuF9kZwZjG1NWURnEfrZNDPsSv4fuDgvokWmIWx05mcYBKuG9Go7tkXbC4cg7cEZNAUUuoynx61W4w/cr4fyIOYg==";
     return env->NewStringUTF(az.c_str());
 }
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_net_vidflix_Model_Auth_ApiTokenModel_sec(JNIEnv *env, jobject thiz) {
+Java_com_denzo_in_1live_Model_Auth_ApiTokenModel_sec(JNIEnv *env, jobject thiz) {
     std::string ap = "PvmPdnGJkMK6d9qfQUBA720pidraV4/07MxN4fFHDSPWxHZsS2Z+t3FZnL+MmjRALDbfgSju9IenwXuy0rDKhg==";
     return env->NewStringUTF(ap.c_str());
 }extern "C"
 JNIEXPORT jstring JNICALL
-Java_net_vidflix_Model_Auth_ApiTokenModel_salt(JNIEnv *env, jobject thiz) {
+Java_com_denzo_in_1live_Model_Auth_ApiTokenModel_salt(JNIEnv *env, jobject thiz) {
     std::string ap = "gV5Vnn8GahHiFHASXz+Ihh4SjwK1ecrU147TGDKL2nc=";
     return env->NewStringUTF(ap.c_str());
 }extern "C"
 JNIEXPORT jstring JNICALL
-Java_net_vidflix_Model_Auth_ApiTokenModel_varSZION(JNIEnv *env, jobject thiz) {
+Java_com_denzo_in_1live_Model_Auth_ApiTokenModel_varSZION(JNIEnv *env, jobject thiz) {
     std::string ap = "ysUZRvNen3MX0Q/kPwwjkDaE/Rg2LUFIsbtL5JSdw68=";
     return env->NewStringUTF(ap.c_str());
 }
