@@ -1,6 +1,5 @@
 package com.denzo.in_live.Activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,13 +13,14 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.denzo.in_live.BuildConfig;
 import com.denzo.in_live.MainActivity;
 import com.denzo.in_live.R;
 
-public class SplashActivity extends Activity {
+public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
     private ConstraintLayout constraintLayout;
     private TextView ver;
