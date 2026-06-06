@@ -1,7 +1,5 @@
 package com.denzo.in_live.ui.search;
 
-import static java.security.AccessController.getContext;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzo.fetcher.Fetcher.Fetcher;
-import com.denzo.fetcher.RecyclerView.EmptyRecyclerView;
 import com.denzo.fetcher.Utils.Utils;
 import com.denzo.fetcher.enums.Method;
 
@@ -26,6 +23,7 @@ import com.denzo.in_live.Model.search.ContentItem;
 import com.denzo.in_live.Model.search.SearchModel;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Utils.Constant;
+import com.denzo.in_live.Utils.MockData;
 import com.denzo.in_live.fragment.InitFragment;
 
 import butterknife.BindView;
@@ -84,7 +82,10 @@ public class SearchFragment extends InitFragment {
             query="";
 
         if (query.length()>=3)
-            Fetcher.ref(Constant.search+query+"&asset_type=global").setMethod(Method.GET).connect(SearchModel.class, response -> {
+            Fetcher.ref(Constant.search+query+"&asset_type=global")
+                    .setMethod(Method.GET)
+                    .setMocked(Constant.MOCK ? MockData.SEARCH_RESULTS_JSON : null)
+                    .connect(SearchModel.class, response -> {
                 getInitActivity().loading(false);
                 List<ContentItem> searchModels=response.getObject().getContent();
                 if (searchModels!=null)
