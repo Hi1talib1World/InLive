@@ -1,7 +1,5 @@
 package com.denzo.in_live.ui.liveTv;
 
-import static java.security.AccessController.getContext;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
