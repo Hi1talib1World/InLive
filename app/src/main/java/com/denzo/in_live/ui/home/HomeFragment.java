@@ -1,7 +1,5 @@
 package com.denzo.in_live.ui.home;
 
-import static java.security.AccessController.getContext;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +23,7 @@ import com.denzo.in_live.Adapter.SliderAdapter;
 import com.denzo.in_live.Model.Home.HomeModel;
 import com.denzo.in_live.R;
 import com.denzo.in_live.Utils.Constant;
+import com.denzo.in_live.Utils.MockData;
 import com.denzo.in_live.fragment.InitFragment;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
@@ -73,6 +72,7 @@ public class HomeFragment extends InitFragment {
         Fetcher.ref(Constant.home)
                 .setMethod(Method.GET)
                 .setHeaders(hashMap)
+                .setMocked(Constant.MOCK ? MockData.HOME_JSON : null)
                 .connect(HomeModel.class, response -> {
                     if (response.getObject()!=null){
                         dataAdapter.setList(response.getObject().getData());
