@@ -59,7 +59,7 @@ public class LiveTvCategoryFragment extends InitFragment {
     }
 
     private void fetch() {
-        String url = "https://api.vidflix.net/v2/api/premium/11/?name=categories&is_series=4";
+        String url = "https://api.vidflix.net/v2/api/premium/11/?name=home&is_series=4";
 
         Fetcher.ref(url).setMethod(Method.GET).connect(VootListModel.class, response -> {
             getInitActivity().loading(false);
