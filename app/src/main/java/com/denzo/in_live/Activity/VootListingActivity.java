@@ -11,6 +11,8 @@ import com.denzo.fetcher.enums.Method;
 import com.denzo.in_live.Adapter.VootListingAdapter;
 import com.denzo.in_live.Model.Voot.VootListModel;
 import com.denzo.in_live.R;
+import com.denzo.in_live.Utils.Constant;
+import com.denzo.in_live.Utils.MockData;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +41,7 @@ public class VootListingActivity extends InitActivity {
         loading(true);
         Fetcher.ref(api)
                 .setMethod(Method.GET)
+                .setMocked(Constant.MOCK ? MockData.TV_CHANNELS_JSON : null)
                 .connect(VootListModel.class,response -> {
                     loading(false);
                     model=response.getObject();
