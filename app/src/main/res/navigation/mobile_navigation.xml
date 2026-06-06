@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.denzo.in_live.ui.more.MoreFragment"
+        android:name="com.denzo.in_live.ui.liveTv.LiveTvCategoryFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_more" />
+        tools:layout="@layout/fragment_live_tv" />
 
     <fragment
         android:id="@+id/navigation_notifications"
