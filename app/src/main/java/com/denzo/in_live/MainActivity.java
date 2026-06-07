@@ -24,7 +24,7 @@ public class MainActivity extends InitActivity {
         setContentView(R.layout.activity_main);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.DarkRed));
+            getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.md_theme_dark_surfaceContainer));
         }
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
