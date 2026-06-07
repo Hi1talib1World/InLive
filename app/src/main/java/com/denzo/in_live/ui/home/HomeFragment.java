@@ -26,6 +26,7 @@ import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.Utils.MockData;
 import com.denzo.in_live.fragment.InitFragment;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.material.appbar.MaterialToolbar;
 
 import java.util.HashMap;
 
@@ -41,8 +42,8 @@ public class HomeFragment extends InitFragment {
     RecyclerView rvData;
     @BindView(R.id.rv_slider)
     RecyclerView rvSlider;
-    @BindView(R.id.home_progress)
-    ProgressBar homeProg;
+    @BindView(R.id.topAppBar)
+    MaterialToolbar toolbar;
     @BindView(R.id.live_fb)
     ShimmerFrameLayout homefbs;
 
@@ -77,7 +78,6 @@ public class HomeFragment extends InitFragment {
                     if (response.getObject()!=null){
                         dataAdapter.setList(response.getObject().getData());
                         sliderAdapter.setList(response.getObject().getSlider());
-//                        homeProg.setVisibility(View.GONE);
                         homefbs.setVisibility(View.GONE);
                     }else Toast.makeText(getContext(),"Something went wrong", Toast.LENGTH_SHORT).show();
                 });
