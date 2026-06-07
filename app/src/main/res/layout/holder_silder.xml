@@ -1,18 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="match_parent"
         android:id="@+id/img_slide"
-        android:scaleType="fitXY"
-        android:layout_height="250dp"/>
-
-    <ImageView
-        android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:src="@drawable/scrim" />
-</RelativeLayout>
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/dummy_img" />
+
+    <View
+        android:id="@+id/gradient_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/scrim"
+        app:layout_constraintBottom_toBottomOf="@+id/img_slide"
+        app:layout_constraintTop_toTopOf="@+id/img_slide" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_slide">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/live_red"
+                android:fontFamily="@font/exo_black1"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="LIVE"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_category_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@color/glass_white_10"
+                android:fontFamily="@font/exo_2_semibold"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:text="Champions League" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_slide_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/exo_black1"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Real Madrid vs Manchester City" />
+
+        <TextView
+            android:id="@+id/tv_slide_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/exo_2"
+            android:maxLines="2"
+            android:textColor="@color/md_theme_dark_onSurface"
+            android:textSize="12sp"
+            tools:text="Quarter-Finals: Second Leg. The world's biggest clubs face off in a high-stakes battle for dominance." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/md_theme_dark_primaryContainer"
+                android:fontFamily="@font/exo_black1"
+                android:text="WATCH NOW"
+                android:textColor="@color/md_theme_dark_onPrimaryContainer"
+                android:textSize="12sp"
+                app:cornerRadius="4dp"
+                app:icon="@drawable/ic_server1"
+                app:iconSize="18dp"
+                app:iconTint="@color/md_theme_dark_onPrimaryContainer" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                app:cardBackgroundColor="@color/glass_white_10"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_input_add"
+                    app:tint="@color/white" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
