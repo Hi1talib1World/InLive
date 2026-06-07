@@ -10,11 +10,31 @@
     <color name="bg_meta_container">#000000</color>
     <color name="profile_default_tint">#e0e0e0</color>
 
-    <color name="DarkAccent">#000000</color>
-    <color name="LightAccent">#000000</color>
-    <color name="RedAccent">#CA2128</color>
-    <color name="DarkRed">#800000</color>
-    <color name="MatteBlack">#1B1B1B</color>
+    <!-- New Theme Colors from HTML -->
+    <color name="md_theme_dark_background">#10131b</color>
+    <color name="md_theme_dark_surface">#10131b</color>
+    <color name="md_theme_dark_onSurface">#e0e2ed</color>
+    <color name="md_theme_dark_primary">#adc6ff</color>
+    <color name="md_theme_dark_onPrimary">#002e69</color>
+    <color name="md_theme_dark_primaryContainer">#4b8eff</color>
+    <color name="md_theme_dark_onPrimaryContainer">#00285c</color>
+    <color name="md_theme_dark_secondary">#c8c6c5</color>
+    <color name="md_theme_dark_onSecondary">#313030</color>
+    <color name="md_theme_dark_tertiary">#ffb595</color>
+    <color name="md_theme_dark_onTertiary">#571e00</color>
+    <color name="md_theme_dark_surfaceContainer">#1c2028</color>
+    <color name="md_theme_dark_surfaceContainerHigh">#272a32</color>
+    <color name="md_theme_dark_surfaceVariant">#31353d</color>
+    <color name="md_theme_dark_outline">#8b90a0</color>
+
+    <color name="glass_white_10">#1AFFFFFF</color>
+    <color name="live_red">#FF3B30</color>
+
+    <color name="DarkAccent">#10131b</color>
+    <color name="LightAccent">#1c2028</color>
+    <color name="RedAccent">#adc6ff</color>
+    <color name="DarkRed">#002e69</color>
+    <color name="MatteBlack">#10131b</color>
     <color name="demo_dark_transparent">#24000000</color>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
