@@ -4,9 +4,7 @@ import static com.denzo.fetcher.Utils.Utils.capitalizeFirstLetter;
 import static com.denzo.fetcher.Utils.Utils.dpToPx;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.bumptech.glide.Glide;
 import com.denzo.fetcher.Adapter.RecyclerBuilder;
@@ -43,24 +41,30 @@ public class HomeCategoryAdapter extends RecyclerBuilder<ContentItem> {
         if (model.getThumbnail()!=null){
             Glide.with(getContext()).load(model.getThumbnail()).placeholder(shimmer()).into(imgThumbnail);
         }
-        Animation slide = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_left_long);
-        tvCategory.startAnimation(slide);
-
-        if (model.getCategoryType().equals("Live TV"))
+        
+        if ("Live TV".equals(model.getCategoryType()))
         {
-            LinearLayout linearLayout=findViewById(R.id.lv_data);
-            if (linearLayout!=null){
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                layoutParams.setMargins(25,20, 25, 20);
-                linearLayout.setLayoutParams(layoutParams);
-            }
+            // For Live TV channels, use a 1:1 or 16:9 like aspect ratio as in HTML
+            // Actually HTML uses 32x20 (horizontal) for channels and 2/3 (vertical) for Trending.
+            // But HomeCategoryAdapter is used in rv_category which usually has vertical posters.
+            // Let's adjust to horizontal for Live TV
+            
+            ViewGroup.LayoutParams lp = cardView.getLayoutParams();
+            lp.width = dpToPx(160);
+            cardView.setLayoutParams(lp);
 
-            cardView.setPreventCornerOverlap(false);
-            cardView.setRadius(100);
-            setLayoutPrams(cardView,80,80);
-            cardView.setStrokeColor(Color.WHITE);
-            cardView.setStrokeWidth(dpToPx(3));
+            ConstraintLayout.LayoutParams imgLp = (ConstraintLayout.LayoutParams) imgThumbnail.getLayoutParams();
+            imgLp.dimensionRatio = "16:9";
+            imgThumbnail.setLayoutParams(imgLp);
+        } else {
+            // Default 2:3 ratio for movies/series
+            ViewGroup.LayoutParams lp = cardView.getLayoutParams();
+            lp.width = dpToPx(128);
+            cardView.setLayoutParams(lp);
+
+            ConstraintLayout.LayoutParams imgLp = (ConstraintLayout.LayoutParams) imgThumbnail.getLayoutParams();
+            imgLp.dimensionRatio = "2:3";
+            imgThumbnail.setLayoutParams(imgLp);
         }
     }
 
