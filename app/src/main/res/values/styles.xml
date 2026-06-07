@@ -3,23 +3,23 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/colorPrimaryDark</item>
-        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_dark_onPrimaryContainer</item>
 
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/colorAccent</item>
-        <item name="colorOnSecondary">@color/MatteBlack</item>
+        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
 
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:statusBarColor">@color/md_theme_dark_background</item>
 
         <!-- Material 3 specific attributes -->
-        <item name="colorSurface">@color/MatteBlack</item>
-        <item name="colorOnSurface">@color/white</item>
-        <item name="android:colorBackground">@color/MatteBlack</item>
-        <item name="colorOnBackground">@color/white</item>
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
+        <item name="android:colorBackground">@color/md_theme_dark_background</item>
+        <item name="colorOnBackground">@color/md_theme_dark_onSurface</item>
     </style>
 
     <style name="MyAlertDialogStyle" parent="Theme.Material3.DayNight.Dialog.Alert">
