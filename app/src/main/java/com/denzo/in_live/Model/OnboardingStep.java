@@ -1,4 +1,4 @@
-package com.denzo.in_live.model;
+package com.denzo.in_live.Model;
 
 public class OnboardingStep {
     private final String title;
