@@ -29,6 +29,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Activity.OnboardingActivity" android:exported="false" />
         <activity android:name=".MainActivity" android:exported="false" />
         <activity android:name=".Activity.InitActivity" android:exported="false" />
         <activity android:name=".Activity.MoviesActivity" android:exported="false" />
