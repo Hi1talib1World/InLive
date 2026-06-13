@@ -19,6 +19,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.denzo.in_live.BuildConfig;
 import com.denzo.in_live.MainActivity;
 import com.denzo.in_live.R;
+import com.denzo.in_live.manager.SessionManager;
 
 public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
@@ -64,7 +65,14 @@ public class SplashActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                    SessionManager sessionManager = new SessionManager(SplashActivity.this);
+                    Class<?> targetActivity;
+                    if (sessionManager.isFirstRunCompleted()) {
+                        targetActivity = MainActivity.class;
+                    } else {
+                        targetActivity = OnboardingActivity.class;
+                    }
+                    Intent i = new Intent(SplashActivity.this, targetActivity);
                     startActivity(i);
                     finish();
                 }
