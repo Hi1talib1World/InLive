@@ -29,19 +29,19 @@ public class OnboardingViewModel extends ViewModel {
                 "Welcome to In-Live",
                 "Your ultimate destination for live TV and movies.",
                 R.drawable.inlive,
-                R.color.black
+                R.color.MatteBlack
         ));
         steps.add(new OnboardingStep(
                 "Vast Library",
                 "Explore thousands of titles across multiple genres.",
                 R.drawable.logo_head,
-                R.color.black
+                R.color.MatteBlack
         ));
         steps.add(new OnboardingStep(
                 "Stay Updated",
                 "Get notified about the latest releases and live events.",
                 R.drawable.main_logo,
-                R.color.black
+                R.color.MatteBlack
         ));
     }
 
