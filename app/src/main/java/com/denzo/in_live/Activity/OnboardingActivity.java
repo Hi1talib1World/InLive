@@ -73,7 +73,7 @@ public class OnboardingActivity extends AppCompatActivity {
             indicators[i] = new ImageView(getApplicationContext());
             indicators[i].setImageDrawable(ContextCompat.getDrawable(
                     getApplicationContext(),
-                    R.drawable.circle
+                    R.drawable.indicator_dot
             ));
             indicators[i].setLayoutParams(params);
             binding.layoutIndicators.addView(indicators[i]);
