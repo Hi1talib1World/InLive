@@ -32,7 +32,7 @@ public class SimplePlayer {
     public void destroyPlayer(){
         if (player!=null)
         {
-            player.stop();
+            player.release();
             player=null;
         }
     }
