@@ -30,6 +30,15 @@ public class VideosItem implements Serializable {
     long timestamp;
 
     private String agent;
+    private String title;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public String getIsMpd() {
         return isMpd;
