@@ -31,6 +31,7 @@ import com.denzo.in_live.R;
 import com.denzo.in_live.Utils.Constant;
 import com.denzo.in_live.Utils.SimplePlayer;
 import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;
@@ -120,17 +121,18 @@ public class InitActivity extends AppCompatActivity {
 
     protected MediaSource mediaSource(String url, String agent) {
         Uri mUri = Uri.parse(url);
+        MediaItem mediaItem = MediaItem.fromUri(mUri);
         @C.ContentType int type = Util.inferContentType(mUri);
         DataSource.Factory dataSourceFactory = buildDataSourceFactory(agent);
         MediaSource videoSource;
         if (type == C.TYPE_DASH)
-            videoSource = new DashMediaSource.Factory(dataSourceFactory).createMediaSource(mUri);
+            videoSource = new DashMediaSource.Factory(dataSourceFactory).createMediaSource(mediaItem);
         else if (type == C.TYPE_SS)
-            videoSource = new SsMediaSource.Factory(dataSourceFactory).createMediaSource(mUri);
+            videoSource = new SsMediaSource.Factory(dataSourceFactory).createMediaSource(mediaItem);
         else if (type == C.TYPE_HLS)
-            videoSource = new HlsMediaSource.Factory(dataSourceFactory).createMediaSource(mUri);
+            videoSource = new HlsMediaSource.Factory(dataSourceFactory).createMediaSource(mediaItem);
         else {
-            videoSource = new ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(mUri);
+            videoSource = new ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(mediaItem);
         }
         return videoSource;
     }
