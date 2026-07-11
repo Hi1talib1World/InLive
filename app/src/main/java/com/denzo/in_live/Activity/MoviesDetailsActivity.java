@@ -94,6 +94,7 @@ public class MoviesDetailsActivity extends InitActivity {
         Intent intent=new Intent(this,PlayerActivity.class);
         item.setAgent(moviePlayBackModel.getUserAgent());
         item.setLicenseUrl(moviePlayBackModel.getLicenseUrl());
+        item.setTitle(moviePlayBackModel.getName());
         intent.putExtra("VideoItem",item);
         //TODO:CLeanup in future
         if (Util.inferContentType(Uri.parse(item.getFileUrl()))== C.TYPE_OTHER)
