@@ -51,17 +51,18 @@ public class EpisodeAdapter extends RecyclerBuilder<EpisodesItem> {
         {
             Mp4QualitySelectorDialog dialog=new Mp4QualitySelectorDialog(getContext(),model.getUrl());
             dialog.setOnDismissListener(d -> {
-                loadVideo(dialog.getSelected());
+                loadVideo(dialog.getSelected(), model.getEpiName());
             });
             dialog.show();
         }
         else {
-            loadVideo(model.getUrl().get(0));
+            loadVideo(model.getUrl().get(0), model.getEpiName());
         }
 
 
     }
-    private void loadVideo(VideosItem item){
+    private void loadVideo(VideosItem item, String title){
+        item.setTitle(title);
         if (getCustomData("isLive").equals("1"))
         {
             item.setFileUrl(DecoderTask.getInstance().decrypt(item.getUrl(),item.getTimestamp()));
