@@ -10,7 +10,7 @@
     tools:context=".Activity.PlayerActivity"
     tools:deviceIds="tv">
 
-    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+    <com.google.android.exoplayer2.ui.PlayerView
         android:layout_width="match_parent"
         android:id="@+id/playerView"
         app:controller_layout_id="@layout/exo_controller"
