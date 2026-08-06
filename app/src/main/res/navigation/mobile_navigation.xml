@@ -18,6 +18,26 @@
         tools:layout="@layout/fragment_live_tv" />
 
     <fragment
+        android:id="@+id/navigation_worlds"
+        android:name="com.denzo.in_live.ui.worlds.WorldsFragment"
+        android:label="Worlds"
+        tools:layout="@layout/fragment_worlds">
+        <action
+            android:id="@+id/action_navigation_worlds_to_worldChannelsFragment"
+            app:destination="@id/worldChannelsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/worldChannelsFragment"
+        android:name="com.denzo.in_live.ui.worlds.WorldChannelsFragment"
+        android:label="World Channels"
+        tools:layout="@layout/fragment_world_channels">
+        <argument
+            android:name="fileName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.denzo.in_live.ui.search.SearchFragment"
         android:label="@string/title_notifications"
