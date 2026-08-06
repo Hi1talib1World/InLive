@@ -59,6 +59,12 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            assets.srcDirs += ['src/main/res/streams']
+        }
+    }
+
     ndkVersion '21.0.6113669'
 }
 
